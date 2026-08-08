@@ -1,0 +1,37 @@
+{
+  "$schema": "https://modelcontextprotocol.io/schemas/server-card/v1.json",
+  "serverInfo": {
+    "name": "Ace Ultra Premium Carts",
+    "version": "1.0.0",
+    "description": "Premium vape products — 130+ flavors, ships from Los Angeles. Adults 21+ only.",
+    "homepage": "https://acecarts.org",
+    "contact": {
+      "email": "info@acecarts.org",
+      "whatsapp": "+14482348667"
+    }
+  },
+  "transport": {
+    "type": "none",
+    "note": "Static site — no live MCP endpoint. Resources below are HTML pages only."
+  },
+  "capabilities": {
+    "resources": [
+      { "name": "product-catalog", "description": "Full product catalog", "uri": "https://acecarts.org/shop/" },
+      { "name": "wholesale-info", "description": "Wholesale pricing and ordering", "uri": "https://acecarts.org/wholesale/" },
+      { "name": "blog", "description": "Educational content", "uri": "https://acecarts.org/blog/" }
+    ],
+    "commerce": {
+      "ordering": "human_ordering_only — WhatsApp, Telegram, or on-site order form",
+      "payment": ["crypto-BTC", "crypto-ETH", "crypto-USDT", "crypto-SOL", "crypto-XRP", "crypto-BNB"],
+      "currency": "USD",
+      "minimumOrder": "100",
+      "freeShipping": "250",
+      "ships": "US domestic and international"
+    }
+  },
+  "legal": {
+    "ageRestriction": "21+",
+    "productType": "vape products",
+    "compliance": "Adults 21+ only. Age verification required at site entry."
+  }
+}

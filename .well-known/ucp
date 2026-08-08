@@ -1,0 +1,31 @@
+{
+  "ucp": "1.0",
+  "protocol_version": "1.0",
+  "spec": "https://ucp.dev/specification/overview/",
+  "schema": "https://ucp.dev/schema/v1.json",
+  "site": "https://acecarts.org",
+  "name": "Ace Ultra Premium Carts",
+  "description": "Premium vape products — 130+ flavors, ships from Los Angeles. Adults 21+ only.",
+  "services": [
+    { "id": "product-catalog", "type": "catalog", "url": "https://acecarts.org/shop/", "description": "Full product catalog" },
+    { "id": "order", "type": "commerce", "url": "https://wa.me/14482348667", "description": "Start an order via WhatsApp" },
+    { "id": "wholesale", "type": "b2b", "url": "https://acecarts.org/wholesale/", "description": "Wholesale pricing and bulk ordering" }
+  ],
+  "capabilities": ["browse", "inquiry", "wholesale", "content"],
+  "endpoints": {
+    "catalog": "https://acecarts.org/shop/",
+    "contact": "https://acecarts.org/contact/",
+    "agent_skills": "https://acecarts.org/.well-known/agent-skills/index.json",
+    "mcp_server_card": "https://acecarts.org/.well-known/mcp/server-card.json",
+    "api_catalog": "https://acecarts.org/.well-known/api-catalog",
+    "llms_txt": "https://acecarts.org/llms.txt"
+  },
+  "currency": "USD",
+  "minimum_order_usd": "100",
+  "payment_methods": ["crypto-BTC", "crypto-ETH", "crypto-USDT", "crypto-SOL", "crypto-XRP", "crypto-BNB"],
+  "legal": {
+    "age_restriction": "21+",
+    "product_type": "vape products",
+    "compliance": "Adults 21+ only. Age verification required at site entry."
+  }
+}

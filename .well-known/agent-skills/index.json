@@ -1,0 +1,43 @@
+{
+  "$schema": "https://agentskills.io/schema/v0.2.0/index.json",
+  "name": "Ace Ultra Premium Carts",
+  "url": "https://acecarts.org",
+  "description": "Premium vape products — 130+ flavors, ships from Los Angeles. Adults 21+ only.",
+  "skills": [
+    {
+      "name": "browse-products",
+      "type": "navigation",
+      "description": "Browse the full product catalog by category (disposables, cartridges, Love Edition, Spring Edition, Black Badge, 4G Gen 2, gummies)",
+      "url": "https://acecarts.org/shop/",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "order-via-whatsapp",
+      "type": "commerce",
+      "description": "Start an order via WhatsApp. Minimum order $100 USD.",
+      "url": "https://wa.me/14482348667",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "wholesale-inquiry",
+      "type": "commerce",
+      "description": "Wholesale pricing tiers and master box availability for dispensaries and resellers",
+      "url": "https://acecarts.org/wholesale/",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "product-education",
+      "type": "content",
+      "description": "Product reviews, flavor guides, and ordering guides",
+      "url": "https://acecarts.org/blog/",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "contact",
+      "type": "support",
+      "description": "Contact for product questions, orders, or wholesale inquiries",
+      "url": "https://acecarts.org/contact/",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ]
+}

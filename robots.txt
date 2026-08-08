@@ -10,5 +10,62 @@ User-agent: Googlebot
 Allow: /
 Disallow: /checkout/
 
+Content-Signal: search=yes, ai-input=yes, ai-train=no
+
+# AI crawlers — welcome to index product & content pages
+User-agent: GPTBot
+Allow: /
+Disallow: /checkout/
+
+User-agent: ChatGPT-User
+Allow: /
+Disallow: /checkout/
+
+User-agent: ClaudeBot
+Allow: /
+Disallow: /checkout/
+
+User-agent: Claude-Web
+Allow: /
+Disallow: /checkout/
+
+User-agent: PerplexityBot
+Allow: /
+Disallow: /checkout/
+
+User-agent: Applebot
+Allow: /
+Disallow: /checkout/
+
+User-agent: Amazonbot
+Allow: /
+Disallow: /checkout/
+
+User-agent: Bytespider
+Allow: /
+Disallow: /checkout/
+
+User-agent: CCBot
+Allow: /
+Disallow: /checkout/
+
+User-agent: Google-Extended
+Allow: /
+Disallow: /checkout/
+
+User-agent: Meta-ExternalAgent
+Allow: /
+Disallow: /checkout/
+
+User-agent: cohere-ai
+Allow: /
+Disallow: /checkout/
+
 Sitemap: https://acecarts.org/sitemap.xml
 Sitemap: https://acecarts.org/sitemap.txt
+
+# Agent-readable resources
+# llms.txt: https://acecarts.org/llms.txt
+# API Catalog: https://acecarts.org/.well-known/api-catalog
+# Agent Skills: https://acecarts.org/.well-known/agent-skills/index.json
+# MCP Server Card: https://acecarts.org/.well-known/mcp/server-card.json

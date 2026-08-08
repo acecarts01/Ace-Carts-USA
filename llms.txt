@@ -1,0 +1,27 @@
+# Ace Ultra Premium Carts
+
+> Ace Ultra Premium Carts (acecarts.org) is a Los Angeles-based premium vape brand offering 2G and 4G disposables, 510 Liquid Diamond cartridges, Diamond Sauce Love Edition flavors, and gummies, with retail and wholesale ordering via WhatsApp, Telegram, or the on-site order form. Adults 21+ only.
+
+Ace Ultra Premium Carts USA ships from Los Angeles, CA and serves retail customers, dispensaries, and wholesale buyers domestically and internationally. Orders are placed through the on-site order form, WhatsApp, or Telegram, with payment by cryptocurrency (BTC, ETH, USDT, SOL, XRP, BNB) — a 5% discount applies to first crypto orders with code ACECRYPTO1. Minimum order is $100 USD; free shipping applies over $250.
+
+## Shop
+- [All Products](https://acecarts.org/shop/): Full catalog — disposables, cartridges, Love Edition, Spring Edition, Black Badge, 4G Gen 2, gummies, and master boxes
+- [Wholesale](https://acecarts.org/wholesale/): Wholesale pricing and master box availability for dispensaries and resellers
+
+## Learn
+- [Blog](https://acecarts.org/blog/): Product reviews, flavor guides, and ordering guides
+- [How to Order](https://acecarts.org/how-to-order/): Step-by-step ordering instructions
+- [About](https://acecarts.org/about/): Brand background and shipping info
+- [Contact / FAQ](https://acecarts.org/contact/): Contact form and frequently asked questions
+
+## Legal
+- [Terms & Conditions](https://acecarts.org/terms-and-conditions/): Site terms, 21+ age requirement
+- [Privacy Policy](https://acecarts.org/privacy-policy/): Privacy practices
+- [Shipping Policy](https://acecarts.org/shipping-policy/): Domestic and international shipping details
+- [Refund & Returns](https://acecarts.org/refund-and-returns/): Refund and return policy
+
+## Optional
+- [API Catalog](https://acecarts.org/.well-known/api-catalog): Machine-readable resource index
+- [Agent Skills](https://acecarts.org/.well-known/agent-skills/index.json): Agent-discoverable site actions
+- [MCP Server Card](https://acecarts.org/.well-known/mcp/server-card.json): MCP server descriptor
+- [Auth](https://acecarts.org/auth.md): Agent authentication notes

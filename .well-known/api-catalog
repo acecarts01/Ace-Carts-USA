@@ -1,0 +1,26 @@
+{
+  "linkset": [
+    {
+      "anchor": "https://acecarts.org/",
+      "https://www.iana.org/assignments/link-relations/service-doc": [
+        { "href": "https://acecarts.org/contact/" }
+      ],
+      "title": "Ace Ultra Premium Carts — Buy Online"
+    },
+    {
+      "anchor": "https://acecarts.org/shop/",
+      "type": "text/html",
+      "title": "Ace Ultra Premium Carts — Product Catalog"
+    },
+    {
+      "anchor": "https://acecarts.org/wholesale/",
+      "type": "text/html",
+      "title": "Ace Ultra Premium Carts — Wholesale"
+    },
+    {
+      "anchor": "https://acecarts.org/blog/",
+      "type": "text/html",
+      "title": "Ace Ultra Premium Carts — Blog"
+    }
+  ]
+}
