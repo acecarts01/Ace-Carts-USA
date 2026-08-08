@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/assets/images/favicon-192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="google-site-verification" content="xoCVUl5Lbj55blDZdE4GdxeNLUtPCU-_NH19Coh1ai8" />
+<meta name="google-site-verification" content="mN2LjnRwAh1fkI_EC5bWPNgh8l834_pSBBLzTdtOSeM" />
+<meta name="msvalidate.01" content="514C36E83C926BAA61A7279458CA6142" /><meta name="theme-color" content="#080808">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow">
+<title>Checkout — Ace Ultra Premium Carts | Acecarts.org</title>
+<link rel="stylesheet" href="/assets/css/style.css">
+<style>
+/* ── CHECKOUT LAYOUT ── */
+.checkout-layout{display:grid;grid-template-columns:1fr 360px;gap:32px;align-items:start;}
+
+/* ── PAYMENT CARDS ── */
+.pay-card{
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:12px;
+  background:#111111;
+  margin-bottom:12px;
+  position:relative;
+  z-index:1;
+  overflow:visible;
+}
+.pay-card-head{
+  display:flex;align-items:center;gap:12px;
+  padding:16px 20px;cursor:pointer;
+  transition:background .2s;
+  border-bottom:1px solid rgba(255,255,255,.06);
+  border-radius:12px 12px 0 0;
+  user-select:none;
+}
+.pay-card-head:hover{background:rgba(255,255,255,.03);}
+.pay-card-head.active{background:rgba(201,168,76,.06);border-color:rgba(201,168,76,.15);}
+.pay-card-head:focus-visible{outline:2px solid #c9a84c;outline-offset:2px;}
+.pay-icon{width:38px;height:38px;border-radius:8px;background:#1a1a1a;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.pay-label{font-size:13px;font-weight:500;color:#f5f0e8;}
+.pay-sub{font-size:11px;color:rgba(245,240,232,.4);}
+
+/* ── PAYMENT BODY — hidden by default, shown when card is .active ── */
+.pay-body{
+  display:none;
+  padding:20px;
+  position:relative;
+  z-index:2;
+  pointer-events:all;
+}
+.pay-card.active{
+  border-color:rgba(201,168,76,.2);
+}
+.pay-card.active .pay-body{
+  display:block;
+}
+.pay-card.active .pay-body *{
+  pointer-events:all;
+}
+/* Every interactive element in pay-body is always reachable */
+.pay-body button{
+  position:relative;
+  z-index:3;
+  cursor:pointer !important;
+  pointer-events:all !important;
+}
+.pay-body input{
+  pointer-events:all !important;
+  cursor:text !important;
+}
+.pay-body button:focus-visible,
+.pay-body input:focus-visible{
+  outline:2px solid #c9a84c;
+  outline-offset:2px;
+}
+
+/* ── WALLET ── */
+.wallet-row{display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid rgba(255,255,255,.06);}
+.wallet-row:last-child{border-bottom:none;}
+.wallet-coin{font-size:12px;font-weight:500;min-width:60px;color:#f5f0e8;}
+.wallet-addr{font-family:monospace;font-size:10px;color:rgba(245,240,232,.45);flex:1;word-break:break-all;}
+.copy-btn{font-size:9px;letter-spacing:.08em;padding:4px 9px;border-radius:4px;background:rgba(201,168,76,.1);border:1px solid rgba(201,168,76,.25);color:#c9a84c;cursor:pointer;white-space:nowrap;transition:background .18s;pointer-events:all !important;}
+.copy-btn:hover{background:rgba(201,168,76,.2);}
+
+/* ── ORDER SUMMARY ── */
+.order-summary{position:sticky;top:90px;border:1px solid rgba(255,255,255,.08);border-radius:12px;background:#111111;padding:24px;}
+.os-title{font-family:'Cormorant Garamond',Georgia,serif;font-size:18px;font-weight:400;margin-bottom:18px;padding-bottom:14px;border-bottom:1px solid rgba(255,255,255,.06);}
+.os-item{display:flex;justify-content:space-between;align-items:baseline;padding:8px 0;font-size:12px;}
+.os-item-name{color:rgba(245,240,232,.5);flex:1;margin-right:12px;}
+.os-item-price{color:#f5f0e8;font-weight:500;white-space:nowrap;}
+.os-total{display:flex;justify-content:space-between;align-items:baseline;padding:14px 0 0;border-top:1px solid rgba(255,255,255,.06);margin-top:8px;}
+.os-total span{font-size:12px;color:rgba(245,240,232,.5);}
+.os-total strong{font-family:'Cormorant Garamond',Georgia,serif;font-size:26px;font-weight:300;color:#c9a84c;}
+.discount-row{display:flex;justify-content:space-between;font-size:11px;padding:4px 0;color:#c9a84c;}
+
+/* ── COIN TABS ── */
+.coin-tab{font-size:10px;letter-spacing:.07em;padding:5px 10px;border-radius:100px;border:1px solid rgba(255,255,255,.1);background:transparent;color:rgba(245,240,232,.5);cursor:pointer;transition:all .18s;pointer-events:all !important;}
+.coin-tab.active,.coin-tab:hover{background:#c9a84c;border-color:#c9a84c;color:#080808;font-weight:600;}
+
+/* ── RESPONSIVE ── */
+@media(max-width:860px){
+  .checkout-layout{grid-template-columns:1fr;}
+  .order-summary{position:static;margin-top:20px;}
+}
+@media(max-width:480px){
+  .checkout-layout{gap:16px;}
+  .pay-card-head{padding:14px 16px;}
+  .pay-body{padding:16px;}
+}
+</style>
+<script>
+/* ─────────────────────────────────────────────────────────
+   ACE ULTRA — CHECKOUT SCRIPT
+   Web3Forms → delivers order email to info@acecarts.org
+   Get key free: https://web3forms.com → enter info@acecarts.org
+───────────────────────────────────────────────────────── */
+var W3F_KEY = '47279443-3a1e-4d2c-a945-d251731ead12'; // ← paste your key here
+
+/* ── Order summary ── */
+function renderOrderSummary() {
+  var items   = document.getElementById('os-items');
+  var totalEl = document.getElementById('os-total');
+  if (!items) return;
+  if (!cart || cart.length === 0) {
+    items.innerHTML = '<div style="font-size:12px;color:rgba(245,240,232,.4)">Cart is empty. <a href="/shop/" style="color:#c9a84c">Shop now</a></div>';
+    if (totalEl) totalEl.textContent = '$0.00';
+    return;
+  }
+  items.innerHTML = cart.map(function(i) {
+    return '<div class="os-item"><span class="os-item-name">' + i.name + ' \xd7' + i.qty + '</span>'
+      + '<span class="os-item-price">$' + (i.price * i.qty).toFixed(2) + '</span></div>';
+  }).join('');
+  if (totalEl) totalEl.textContent = '$' + getSubtotal().toFixed(2);
+}
+
+/* ── Tab selector ── */
+function selectPay(type) {
+  ['crypto','wa'].forEach(function(t) {
+    var card = document.getElementById('pay-' + t);
+    if (!card) return;
+    card.classList.remove('active');
+    var head = card.querySelector('.pay-card-head');
+    if (head) head.classList.remove('active');
+    var dot = card.querySelector('.pay-card-head span:last-child');
+    if (dot) dot.style.color = 'rgba(245,240,232,.3)';
+  });
+  var sel = document.getElementById('pay-' + type);
+  if (!sel) return;
+  sel.classList.add('active');
+  var head2 = sel.querySelector('.pay-card-head');
+  if (head2) head2.classList.add('active');
+  var dot2 = sel.querySelector('.pay-card-head span:last-child');
+  if (dot2) dot2.style.color = '#c9a84c';
+}
+
+/* ── QR code ── */
+function showCoin(coin, btn) {
+  document.querySelectorAll('.wallet-panel').forEach(function(p) { p.style.display = 'none'; });
+  var panel = document.getElementById('panel-' + coin);
+  if (panel) panel.style.display = 'block';
+  document.querySelectorAll('.coin-tab').forEach(function(b) { b.classList.remove('active'); });
+  if (btn) btn.classList.add('active');
+  var qrEl = document.getElementById('qr-code');
+  if (!qrEl) return;
+  var wallets = {
+    BTC:'bc1qdhgnlpctw37vg825eejkknurpm23a5lsthfdhg',
+    ETH:'0x2629c24d3720E5A24adBe7Bde4677334B559C36D',
+    USDT_ERC20:'0x2629c24d3720E5A24adBe7Bde4677334B559C36D',
+    USDT_TRC20:'TVQGzSJKcHXTwX6Fn8CPb6A5PmAkoCFZRh',
+    SOL:'GdNUybxyu8cBY7snHAZsdopH6WKdHBVXo5d79mR9PhJ',
+    XRP:'rBiWxdA3a27BXYC9ZwQRTyFdXNWaEjLfBr',
+    BNB:'0x2629c24d3720E5A24adBe7Bde4677334B559C36D'
+  };
+  var addr = wallets[coin];
+  if (addr) {
+    qrEl.innerHTML = '<img src="https://api.qrserver.com/v1/create-qr-code/?size=160x160&data='
+      + encodeURIComponent(addr) + '&bgcolor=ffffff&color=000000&qzone=2"'
+      + ' alt="' + coin + ' QR code" width="160" height="160" style="border-radius:6px;display:block;">';
+  }
+}
+
+/* ══════════════════════════════════════════════════════════
+   PLACE ORDER — sends to info@acecarts.org via Web3Forms
+   ══════════════════════════════════════════════════════════ */
+function placeOrder(method) {
+
+  var fn    = (document.getElementById('co-fn')    ? document.getElementById('co-fn').value    : '').trim();
+  var email = (document.getElementById('co-email') ? document.getElementById('co-email').value : '').trim();
+  var phone = (document.getElementById('co-phone') ? document.getElementById('co-phone').value : '').trim();
+  var addr  = (document.getElementById('co-addr')  ? document.getElementById('co-addr').value  : '').trim();
+  var city  = (document.getElementById('co-city')  ? document.getElementById('co-city').value  : '').trim();
+  var state = (document.getElementById('co-state') ? document.getElementById('co-state').value : '').trim();
+  var zip   = (document.getElementById('co-zip')   ? document.getElementById('co-zip').value   : '').trim();
+  var notes = (document.getElementById('co-notes') ? document.getElementById('co-notes').value : '').trim();
+
+  if (!fn || !email || !addr) {
+    showToast('Please fill in all shipping details');
+    return;
+  }
+  if (!/^[^@]+@[^@]+\.[^@]+$/.test(email)) {
+    showToast('Please enter a valid email address');
+    return;
+  }
+  if (getSubtotal() < 100) {
+    showToast('Minimum order is $100 USD');
+    return;
+  }
+
+  /* ── Generate order number ── */
+  var rand    = Math.floor(Math.random() * 9000) + 1000;
+  var orderNo = 'ACE-' + Date.now().toString(36).toUpperCase().slice(-4) + rand;
+  var total   = getSubtotal().toFixed(2);
+  var payment = method === 'wa' ? 'WhatsApp / Cash' : 'Cryptocurrency';
+  var dated   = new Date().toLocaleString('en-US', { timeZone: 'America/Los_Angeles' });
+
+  var lines = (cart || []).map(function(i) {
+    return i.name + ' x' + i.qty + '  $' + (i.price * i.qty).toFixed(2) + ' USD';
+  }).join('\n');
+
+  var fullAddr = [addr, city, state, zip].filter(Boolean).join(', ');
+
+  /* ── Show loading ── */
+  var btn = document.querySelector('button[onclick*="placeOrder"]');
+  if (btn) { btn.disabled = true; btn.textContent = 'Processing…'; }
+
+  /* ── POST to Web3Forms → info@acecarts.org (Zoho Mail) ── */
+  fetch('https://api.web3forms.com/submit', {
+    method:  'POST',
+    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+    body: JSON.stringify({
+      access_key:    W3F_KEY,
+      subject:       'NEW ORDER ' + orderNo + ' — $' + total + ' — ' + fn,
+      from_name:     'Ace Ultra Checkout',
+      order_number:  orderNo,
+      customer_name: fn,
+      customer_email: email,
+      customer_phone: phone || 'Not provided',
+      shipping_address: fullAddr,
+      order_items:   lines,
+      order_total:   '$' + total + ' USD',
+      payment_method: payment,
+      notes:         notes || 'None',
+      timestamp:     dated + ' (LA time)',
+      message:       'ORDER ' + orderNo + '\n' + dated + '\nPayment: ' + payment
+        + '\n\nCustomer: ' + fn + '\nEmail: ' + email + '\nPhone: ' + (phone||'N/A')
+        + '\nAddress: ' + fullAddr
+        + '\n\nITEMS:\n' + lines
+        + '\n\nTOTAL: $' + total + ' USD'
+        + (notes ? '\n\nNotes: ' + notes : ''),
+      botcheck: ''
+    })
+  })
+  .then(function(r) { return r.json(); })
+  .then(function(data) {
+    if (data.success) {
+      _orderSuccess(btn, orderNo, payment);
+    } else {
+      /* Web3Forms key not set — fallback mailto */
+      _mailtoFallback(fn, email, fullAddr, lines, total, payment, notes, orderNo, dated);
+      _orderSuccess(btn, orderNo, payment);
+    }
+  })
+  .catch(function() {
+    _mailtoFallback(fn, email, fullAddr, lines, total, payment, notes, orderNo, dated);
+    _orderSuccess(btn, orderNo, payment);
+  });
+
+  /* WhatsApp ping for WA orders */
+  if (method === 'wa') {
+    setTimeout(function() {
+      var waMsg = 'New order ' + orderNo
+        + '%0ACustomer: ' + encodeURIComponent(fn)
+        + '%0ATotal: $' + total + ' USD'
+        + '%0AAddress: ' + encodeURIComponent(fullAddr);
+      window.open('https://wa.me/14482348667?text=' + waMsg, '_blank');
+    }, 1500);
+  }
+}
+
+/* ── Mailto fallback (if Web3Forms key not set yet) ── */
+function _mailtoFallback(fn, email, addr, lines, total, payment, notes, orderNo, dated) {
+  var body = 'ORDER ' + orderNo + '\n' + dated
+    + '\nPayment: ' + payment
+    + '\n\nCustomer: ' + fn + '\nEmail: ' + email
+    + '\nAddress: ' + addr
+    + '\n\nITEMS:\n' + lines
+    + '\n\nTOTAL: $' + total + ' USD'
+    + (notes ? '\n\nNotes: ' + notes : '');
+  window.location.href = 'mailto:info@acecarts.org?subject='
+    + encodeURIComponent('NEW ORDER ' + orderNo + ' — $' + total + ' — ' + fn)
+    + '&body=' + encodeURIComponent(body);
+}
+
+/* ── Show confirmation screen with order number ── */
+function _orderSuccess(btn, orderNo, payment) {
+  /* Display order number */
+  var numEl = document.getElementById('order-number-display');
+  if (numEl) numEl.textContent = orderNo;
+
+  /* Swap UI */
+  var layout = document.querySelector('.checkout-layout');
+  if (layout) layout.style.display = 'none';
+  var box = document.getElementById('order-confirm-box');
+  if (box) {
+    box.style.display = 'block';
+    box.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+
+  /* Button state */
+  if (btn) {
+    btn.disabled         = false;
+    btn.textContent      = 'Order ' + orderNo + ' Sent \u2713';
+    btn.style.background = '#22c55e';
+    btn.style.color      = '#fff';
+  }
+
+  showToast('Order ' + orderNo + ' placed successfully!');
+
+  /* Clear cart */
+  setTimeout(function() {
+    try { sessionStorage.removeItem('ace_cart'); } catch(e) {}
+    cart = [];
+    if (typeof updateCartBadge === 'function') updateCartBadge();
+    renderOrderSummary();
+  }, 1500);
+}
+
+function applyCoupon() {
+  var code = (document.getElementById('coupon-input') ? document.getElementById('coupon-input').value : '').trim().toUpperCase();
+  if (code === 'ACECRYPTO1') {
+    showToast('5% crypto discount applied!');
+  } else {
+    showToast('Invalid coupon code');
+  }
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+  selectPay('crypto');
+  renderOrderSummary();
+  var firstTab = document.querySelector('#coin-tabs .coin-tab');
+  if (firstTab) {
+    var m = (firstTab.getAttribute('onclick') || '').match(/'([A-Z_]+)'/);
+    if (m) showCoin(m[1], firstTab);
+  }
+});
+</script>
+<link rel="sitemap" type="application/xml" href="/sitemap.xml">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@acecarts">
+<meta name="twitter:title" content="Checkout — Ace Ultra Premium Carts | Acecarts.org">
+<meta name="twitter:description" content="Buy Ace Ultra Premium Carts at acecarts.org">
+<meta name="twitter:image" content="https://acecarts.org/assets/images/hero-slide-1.webp">
+<meta name="twitter:url" content="https://acecarts.org/">
+</head>
+<body>
+<div id="announce-bar"><div class="announce-track"><span class="announce-item"><span class="announce-dot">●</span>Minimum order: $100 USD</span><span class="announce-item" onclick="copyCode('ACECRYPTO1')"><span class="announce-dot">●</span>ACECRYPTO1 — 5% crypto discount &bull; click to copy</span><span class="announce-item"><span class="announce-dot">●</span>Secure checkout — crypto, WhatsApp</span><span class="announce-item"><span class="announce-dot">●</span>Minimum order: $100 USD</span><span class="announce-item" onclick="copyCode('ACECRYPTO1')"><span class="announce-dot">●</span>ACECRYPTO1 — 5% crypto discount &bull; click to copy</span><span class="announce-item"><span class="announce-dot">●</span>Secure checkout — crypto, WhatsApp</span></div></div>
+<header id="site-header"><div class="header-inner">
+  <a href="/" class="logo"><img src="/assets/images/logo.webp" alt="Ace Ultra Premium Carts" class="logo-img" width="38" height="42"><div class="logo-words"><b>Ace Ultra</b><small>Premium Carts</small></div></a>
+  <nav class="site-nav"><a href="/" class="nav-a">Home</a><a href="/shop/" class="nav-a">Shop</a><a href="/how-to-order/" class="nav-a">How to Order</a><a href="/contact/" class="nav-a">Contact</a></nav>
+  <div class="h-actions"><a href="https://wa.me/14482348667" target="_blank" class="h-icon">💬</a><button class="hamburger" onclick="toggleMobNav()"><span></span><span></span><span></span></button></div>
+</div></header>
+<div id="mob-nav" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+  <div class="mob-nav-inner">
+    <button class="mob-close" onclick="toggleMobNav()" aria-label="Close menu">&#215;</button>
+    <a class="mob-nav-a" href="/" onclick="toggleMobNav()">Home</a>
+    <a class="mob-nav-a" href="/shop/" onclick="toggleMobNav()">Shop</a>
+    <a class="mob-nav-a" href="/blog/" onclick="toggleMobNav()">Blog</a>
+    <a class="mob-nav-a" href="/how-to-order/" onclick="toggleMobNav()">How to Order</a>
+    <a class="mob-nav-a" href="/wholesale/" onclick="toggleMobNav()">Wholesale</a>
+    <a class="mob-nav-a" href="/about/" onclick="toggleMobNav()">About</a>
+    <a class="mob-nav-a" href="/contact/" onclick="toggleMobNav()">Contact</a>
+    <div style="margin-top:32px;padding-top:24px;border-top:1px solid rgba(255,255,255,.1);display:flex;flex-direction:column;gap:12px;">
+      <a href="https://wa.me/14482348667" target="_blank" rel="noopener"
+         class="btn btn-gold" style="justify-content:center;font-size:13px;min-height:48px;"
+         onclick="toggleMobNav()">WhatsApp Us</a>
+      <a href="/checkout/" onclick="toggleMobNav()"
+         class="btn btn-outline" style="justify-content:center;font-size:13px;min-height:48px;">Checkout</a>
+    </div>
+  </div>
+</div>
+
+<div class="page-hero"><div class="container">
+  <div class="breadcrumb"><a href="/">Home</a><span>›</span><a href="/shop/">Shop</a><span>›</span><span>Checkout</span></div>
+  <h1>♠ <em>Checkout</em></h1>
+  <p>Choose your payment method below. Minimum order: $100 USD.</p>
+</div></div>
+
+<section class="section"><div class="container">
+  <div class="checkout-layout">
+    <div>
+      <!-- SHIPPING DETAILS -->
+      <div style="margin-bottom:28px">
+        <div class="label" style="margin-bottom:14px">Shipping Details</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
+          <div class="form-group"><label class="form-label">First Name</label><input type="text" class="form-input" id="co-fn" placeholder="First name"></div>
+          <div class="form-group"><label class="form-label">Last Name</label><input type="text" class="form-input" id="co-ln" placeholder="Last name"></div>
+        </div>
+        <div class="form-group"><label class="form-label">Email</label><input type="email" class="form-input" id="co-email" placeholder="your@email.com"></div>
+        <div class="form-group"><label class="form-label">Phone / WhatsApp</label><input type="tel" class="form-input" id="co-phone" placeholder="+1 (555) 000-0000"></div>
+        <div class="form-group"><label class="form-label">Street Address</label><input type="text" class="form-input" id="co-addr" placeholder="123 Main Street"></div>
+        <div style="display:grid;grid-template-columns:2fr 1fr 1fr;gap:14px">
+          <div class="form-group"><label class="form-label">City</label><input type="text" class="form-input" id="co-city" placeholder="City"></div>
+          <div class="form-group"><label class="form-label">State</label><input type="text" class="form-input" id="co-state" placeholder="CA"></div>
+          <div class="form-group"><label class="form-label">ZIP</label><input type="text" class="form-input" id="co-zip" placeholder="90001"></div>
+        </div>
+        <div class="form-group"><label class="form-label">Order Notes (Optional)</label><textarea class="form-textarea" id="co-notes" style="min-height:72px" placeholder="Specific flavors, special instructions…"></textarea></div>
+      </div>
+
+      <!-- PAYMENT -->
+      <div class="label" style="margin-bottom:14px">Payment Method</div>
+
+      <!-- CRYPTO -->
+      <div class="pay-card active" id="pay-crypto">
+        <div class="pay-card-head active" onclick="selectPay('crypto')" tabindex="0" role="button" aria-expanded="true" onkeydown="if(event.key==='Enter'||event.key===' '){selectPay('crypto')}">
+          <div class="pay-icon" style="font-size:20px;color:var(--gold);">&#9824;</div>
+          <div><div class="pay-label">Cryptocurrency</div><div class="pay-sub">BTC · ETH · USDT · SOL · XRP · BNB — Use ACECRYPTO1 for 5% off</div></div>
+          <span style="margin-left:auto;color:var(--gold)">●</span>
+        </div>
+        <div class="pay-body">
+                    <p style="font-size:12px;color:var(--muted);margin-bottom:16px;">Select your preferred cryptocurrency below. Scan the QR code or copy the wallet address. Send the <strong>exact order total</strong> — no rounding. After sending, click Confirm.</p>
+
+          <!-- COIN SELECTOR TABS -->
+          <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:18px;" id="coin-tabs">
+            <button class="ftab active" style="font-size:10px;padding:5px 12px;" onclick="showCoin('BTC',this)">₿ BTC</button>
+            <button class="ftab" style="font-size:10px;padding:5px 12px;" onclick="showCoin('ETH',this)">⟠ ETH</button>
+            <button class="ftab" style="font-size:10px;padding:5px 12px;" onclick="showCoin('USDT-ERC',this)">₮ USDT ERC-20</button>
+            <button class="ftab" style="font-size:10px;padding:5px 12px;" onclick="showCoin('USDT-TRC',this)">₮ USDT TRC-20</button>
+            <button class="ftab" style="font-size:10px;padding:5px 12px;" onclick="showCoin('SOL',this)">◎ SOL</button>
+            <button class="ftab" style="font-size:10px;padding:5px 12px;" onclick="showCoin('XRP',this)">✕ XRP</button>
+            <button class="ftab" style="font-size:10px;padding:5px 12px;" onclick="showCoin('BNB',this)">⬡ BNB</button>
+          </div>
+
+          <!-- WALLET PANELS WITH QR CODES -->
+          <div id="wallet-panels">
+            <div class="wallet-panel" id="panel-BTC">
+              <div style="display:flex;gap:20px;align-items:flex-start;flex-wrap:wrap;">
+                <div style="text-align:center;flex-shrink:0;">
+                  <div id="qr-BTC" style="width:140px;height:140px;background:#fff;border-radius:6px;display:flex;align-items:center;justify-content:center;"></div>
+                  <div style="font-size:9px;color:var(--muted2);margin-top:6px;letter-spacing:.1em;">BITCOIN · BTC</div>
+                </div>
+                <div style="flex:1;min-width:200px;">
+                  <div style="font-size:10px;color:var(--muted2);margin-bottom:6px;letter-spacing:.1em;text-transform:uppercase;">Wallet Address</div>
+                  <div style="font-family:monospace;font-size:11px;color:var(--white);word-break:break-all;background:var(--card);padding:10px;border-radius:4px;border:1px solid var(--border);line-height:1.6;">bc1qdhgnlpctw37vg825eejkknurpm23a5lsthfdhg</div>
+                  <button class="crypto-copy" style="margin-top:8px;width:100%;padding:8px;" onclick="copyText('bc1qdhgnlpctw37vg825eejkknurpm23a5lsthfdhg')">📋 Copy BTC Address</button>
+                </div>
+              </div>
+            </div>
+            <div class="wallet-panel" id="panel-ETH" style="display:none;">
+              <div style="display:flex;gap:20px;align-items:flex-start;flex-wrap:wrap;">
+                <div style="text-align:center;flex-shrink:0;"><div id="qr-ETH" style="width:140px;height:140px;background:#fff;border-radius:6px;display:flex;align-items:center;justify-content:center;"></div><div style="font-size:9px;color:var(--muted2);margin-top:6px;letter-spacing:.1em;">ETHEREUM · ERC-20</div></div>
+                <div style="flex:1;min-width:200px;"><div style="font-size:10px;color:var(--muted2);margin-bottom:6px;letter-spacing:.1em;text-transform:uppercase;">Wallet Address</div><div style="font-family:monospace;font-size:11px;color:var(--white);word-break:break-all;background:var(--card);padding:10px;border-radius:4px;border:1px solid var(--border);line-height:1.6;">0x2629c24d3720E5A24adBe7Bde4677334B559C36D</div><button class="crypto-copy" style="margin-top:8px;width:100%;padding:8px;" onclick="copyText('0x2629c24d3720E5A24adBe7Bde4677334B559C36D')">📋 Copy ETH Address</button></div>
+              </div>
+            </div>
+            <div class="wallet-panel" id="panel-USDT-ERC" style="display:none;">
+              <div style="display:flex;gap:20px;align-items:flex-start;flex-wrap:wrap;">
+                <div style="text-align:center;flex-shrink:0;"><div id="qr-USDT-ERC" style="width:140px;height:140px;background:#fff;border-radius:6px;display:flex;align-items:center;justify-content:center;"></div><div style="font-size:9px;color:var(--muted2);margin-top:6px;letter-spacing:.1em;">USDT · ERC-20</div></div>
+                <div style="flex:1;min-width:200px;"><div style="font-size:10px;color:var(--muted2);margin-bottom:6px;letter-spacing:.1em;text-transform:uppercase;">Wallet Address</div><div style="font-family:monospace;font-size:11px;color:var(--white);word-break:break-all;background:var(--card);padding:10px;border-radius:4px;border:1px solid var(--border);line-height:1.6;">0x2629c24d3720E5A24adBe7Bde4677334B559C36D</div><button class="crypto-copy" style="margin-top:8px;width:100%;padding:8px;" onclick="copyText('0x2629c24d3720E5A24adBe7Bde4677334B559C36D')">📋 Copy USDT Address</button></div>
+              </div>
+            </div>
+            <div class="wallet-panel" id="panel-USDT-TRC" style="display:none;">
+              <div style="display:flex;gap:20px;align-items:flex-start;flex-wrap:wrap;">
+                <div style="text-align:center;flex-shrink:0;"><div id="qr-USDT-TRC" style="width:140px;height:140px;background:#fff;border-radius:6px;display:flex;align-items:center;justify-content:center;"></div><div style="font-size:9px;color:var(--muted2);margin-top:6px;letter-spacing:.1em;">USDT · TRC-20</div></div>
+                <div style="flex:1;min-width:200px;"><div style="font-size:10px;color:var(--muted2);margin-bottom:6px;letter-spacing:.1em;text-transform:uppercase;">Wallet Address</div><div style="font-family:monospace;font-size:11px;color:var(--white);word-break:break-all;background:var(--card);padding:10px;border-radius:4px;border:1px solid var(--border);line-height:1.6;">TVQGzSJKcHXTwX6Fn8CPb6A5PmAkoCFZRh</div><button class="crypto-copy" style="margin-top:8px;width:100%;padding:8px;" onclick="copyText('TVQGzSJKcHXTwX6Fn8CPb6A5PmAkoCFZRh')">📋 Copy USDT TRC-20 Address</button></div>
+              </div>
+            </div>
+            <div class="wallet-panel" id="panel-SOL" style="display:none;">
+              <div style="display:flex;gap:20px;align-items:flex-start;flex-wrap:wrap;">
+                <div style="text-align:center;flex-shrink:0;"><div id="qr-SOL" style="width:140px;height:140px;background:#fff;border-radius:6px;display:flex;align-items:center;justify-content:center;"></div><div style="font-size:9px;color:var(--muted2);margin-top:6px;letter-spacing:.1em;">SOLANA · SOL</div></div>
+                <div style="flex:1;min-width:200px;"><div style="font-size:10px;color:var(--muted2);margin-bottom:6px;letter-spacing:.1em;text-transform:uppercase;">Wallet Address</div><div style="font-family:monospace;font-size:11px;color:var(--white);word-break:break-all;background:var(--card);padding:10px;border-radius:4px;border:1px solid var(--border);line-height:1.6;">GdNUybxyu8cBY7snHAZsdopH6WKdHBVXo5d79mR9PhJ</div><button class="crypto-copy" style="margin-top:8px;width:100%;padding:8px;" onclick="copyText('GdNUybxyu8cBY7snHAZsdopH6WKdHBVXo5d79mR9PhJ')">📋 Copy SOL Address</button></div>
+              </div>
+            </div>
+            <div class="wallet-panel" id="panel-XRP" style="display:none;">
+              <div style="display:flex;gap:20px;align-items:flex-start;flex-wrap:wrap;">
+                <div style="text-align:center;flex-shrink:0;"><div id="qr-XRP" style="width:140px;height:140px;background:#fff;border-radius:6px;display:flex;align-items:center;justify-content:center;"></div><div style="font-size:9px;color:var(--muted2);margin-top:6px;letter-spacing:.1em;">RIPPLE · XRP</div></div>
+                <div style="flex:1;min-width:200px;"><div style="font-size:10px;color:var(--muted2);margin-bottom:6px;letter-spacing:.1em;text-transform:uppercase;">Wallet Address</div><div style="font-family:monospace;font-size:11px;color:var(--white);word-break:break-all;background:var(--card);padding:10px;border-radius:4px;border:1px solid var(--border);line-height:1.6;">rBiWxdA3a27BXYC9ZwQRTyFdXNWaEjLfBr</div><button class="crypto-copy" style="margin-top:8px;width:100%;padding:8px;" onclick="copyText('rBiWxdA3a27BXYC9ZwQRTyFdXNWaEjLfBr')">📋 Copy XRP Address</button></div>
+              </div>
+            </div>
+            <div class="wallet-panel" id="panel-BNB" style="display:none;">
+              <div style="display:flex;gap:20px;align-items:flex-start;flex-wrap:wrap;">
+                <div style="text-align:center;flex-shrink:0;"><div id="qr-BNB" style="width:140px;height:140px;background:#fff;border-radius:6px;display:flex;align-items:center;justify-content:center;"></div><div style="font-size:9px;color:var(--muted2);margin-top:6px;letter-spacing:.1em;">BNB · BEP-20</div></div>
+                <div style="flex:1;min-width:200px;"><div style="font-size:10px;color:var(--muted2);margin-bottom:6px;letter-spacing:.1em;text-transform:uppercase;">Wallet Address</div><div style="font-family:monospace;font-size:11px;color:var(--white);word-break:break-all;background:var(--card);padding:10px;border-radius:4px;border:1px solid var(--border);line-height:1.6;">0x2629c24d3720E5A24adBe7Bde4677334B559C36D</div><button class="crypto-copy" style="margin-top:8px;width:100%;padding:8px;" onclick="copyText('0x2629c24d3720E5A24adBe7Bde4677334B559C36D')">📋 Copy BNB Address</button></div>
+              </div>
+            </div>
+          </div>
+
+          <div style="margin-top:16px;padding:12px;background:rgba(201,168,76,.06);border:1px solid rgba(201,168,76,.15);border-radius:var(--r);font-size:11px;color:var(--gold);">♠ Use coupon code <strong>ACECRYPTO1</strong> for 5% off your first crypto order. Apply in cart before proceeding.</div>
+          <button class="btn btn-gold" style="width:100%;margin-top:16px;justify-content:center;position:relative;z-index:10;cursor:pointer;" onclick="placeOrder('crypto')" tabindex="0" aria-label="Confirm crypto payment and send order email"> Confirm Crypto Payment & Send Order Email</button>
+        </div>
+      </div>
+
+      <!-- WHATSAPP -->
+      <div class="pay-card" id="pay-wa">
+        <div class="pay-card-head" onclick="selectPay('wa')" tabindex="0" role="button" aria-expanded="false" onkeydown="if(event.key==='Enter'||event.key===' '){selectPay('wa')}">
+          <div class="pay-icon" style="font-size:20px;color:#25d366;">&#9824;</div>
+          <div><div class="pay-label">Order via WhatsApp</div><div class="pay-sub">Send your order directly — we confirm within 24h</div></div>
+        </div>
+        <div class="pay-body">
+          <p style="font-size:12px;color:var(--muted);margin-bottom:16px;">Click the button below to open WhatsApp with your order pre-filled. Our team will reply with payment instructions and confirm your order within 24 hours.</p>
+          <button class="btn btn-gold" style="width:100%;justify-content:center;background:#25D366" onclick="placeOrder('wa')" style="position:relative;z-index:10;cursor:pointer;">💬 Place Order via WhatsApp</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ORDER SUMMARY -->
+    <div class="order-summary">
+      <div class="os-title">Order Summary</div>
+      <div id="os-items"><div style="font-size:12px;color:var(--muted2)">No items in cart.</div></div>
+      <div id="os-coupon-row" class="discount-row" style="display:none"><span>Crypto discount (5%)</span><span id="os-discount"></span></div>
+      <div class="os-total"><span>Total</span><strong id="os-total">$0.00</strong></div>
+      <div style="margin-top:18px;padding:12px;border:1px solid var(--border);border-radius:var(--r);font-size:11px;color:var(--muted2)">
+        <div style="margin-bottom:5px">📦 Ships from Los Angeles, CA</div>
+        <div style="margin-bottom:5px">🔐 Discreet packaging</div>
+        <div>💬 Order updates via WhatsApp</div>
+      </div>
+      <div style="margin-top:16px;text-align:center"><a href="/shop/" style="font-size:11px;color:var(--muted2)">← Continue Shopping</a></div>
+    </div>
+  </div>
+</div></section>
+
+<a href="https://wa.me/14482348667" target="_blank" id="wa-float">💬</a>
+<div id="toast"><span>✅</span><span class="toast-msg"></span></div>
+<script src="/assets/js/app.js"></script>
+
+<style>@media(max-width:900px){.checkout-layout{grid-template-columns:1fr!important;}.order-summary{position:static!important;}}</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+</body></html>

@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/assets/images/favicon-192.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="google-site-verification" content="xoCVUl5Lbj55blDZdE4GdxeNLUtPCU-_NH19Coh1ai8" />
+<meta name="google-site-verification" content="mN2LjnRwAh1fkI_EC5bWPNgh8l834_pSBBLzTdtOSeM" />
+<meta name="msvalidate.01" content="514C36E83C926BAA61A7279458CA6142" />
+<meta name="theme-color" content="#080808">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="description" content="Ace Ultra Premium Carts blog — product guides, flavor reviews, how-to ordering guides, and wholesale insights. Acecarts.org. Adults 21+ only.">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+<meta property="og:title" content="Blog — Ace Ultra Premium Carts USA">
+<meta property="og:description" content="Flavor guides, product reviews, and ordering tutorials for Ace Ultra Premium Carts.">
+<meta property="og:image" content="https://acecarts.org/assets/images/berry-chill.webp">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://acecarts.org/blog/">
+<title>Blog — Ace Ultra Premium Carts USA | Acecarts.org</title>
+<link rel="canonical" href="https://acecarts.org/blog/">
+<link rel="stylesheet" href="/assets/css/style.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Blog","name":"Ace Ultra Premium Carts Blog","url":"https://acecarts.org/blog/","description":"Premium vape guides, flavor reviews, and ordering tutorials.","publisher":{"@type":"Organization","name":"Ace Ultra Premium Carts USA","logo":{"@type":"ImageObject","url":"https://acecarts.org/assets/images/logo.webp","width":120,"height":131}}}
+</script>
+<style>
+/* ===== BLOG HUB — SELF-CONTAINED STYLES ===== */
+.blg-hero{padding:72px 0 52px;background:linear-gradient(160deg,#0d0d0d 0%,#080808 100%);border-bottom:1px solid rgba(255,255,255,.07);position:relative;overflow:hidden;}
+.blg-hero::after{content:'BLOG';position:absolute;right:-2%;top:50%;transform:translateY(-50%);font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(80px,14vw,180px);font-weight:300;color:rgba(201,168,76,.04);pointer-events:none;letter-spacing:.15em;line-height:1;}
+
+/* Featured hero card */
+.blg-feat{display:grid;grid-template-columns:1.4fr 1fr;border-radius:8px;overflow:hidden;border:1px solid rgba(255,255,255,.07);background:#111111;min-height:360px;text-decoration:none;transition:border-color .25s,box-shadow .25s;margin-bottom:52px;}
+.blg-feat:hover{border-color:rgba(201,168,76,.4);box-shadow:0 24px 48px rgba(0,0,0,.5);}
+.blg-feat-img{position:relative;overflow:hidden;}
+.blg-feat-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease;}
+.blg-feat:hover .blg-feat-img img{transform:scale(1.04);}
+.blg-feat-overlay{position:absolute;inset:0;background:linear-gradient(90deg,transparent 55%,#111111 100%);}
+.blg-feat-body{padding:40px 36px;display:flex;flex-direction:column;justify-content:center;}
+.blg-feat-badge{font-size:9px;letter-spacing:.28em;text-transform:uppercase;color:#c9a84c;margin-bottom:12px;}
+.blg-feat-title{font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(20px,2.4vw,30px);font-weight:400;line-height:1.22;color:#f5f0e8;margin-bottom:12px;}
+.blg-feat-desc{font-size:12px;color:rgba(245,240,232,.5);line-height:1.8;margin-bottom:16px;flex:1;}
+.blg-feat-meta{font-size:10px;color:rgba(245,240,232,.28);margin-bottom:12px;}
+.blg-feat-read{display:inline-flex;align-items:center;gap:6px;font-size:11px;color:#c9a84c;letter-spacing:.07em;transition:gap .2s;}
+.blg-feat:hover .blg-feat-read{gap:10px;}
+
+/* Filter bar */
+.blg-filters{background:#0d0d0d;border-bottom:1px solid rgba(255,255,255,.07);padding:16px 0;position:sticky;top:66px;z-index:100;}
+.blg-filter-inner{display:flex;align-items:center;gap:14px;flex-wrap:wrap;justify-content:space-between;}
+
+/* Search */
+.blg-search{position:relative;max-width:260px;flex-shrink:0;}
+.blg-search-in{width:100%;background:#111;border:1px solid rgba(255,255,255,.07);border-radius:100px;padding:9px 40px 9px 16px;font-family:'DM Sans',sans-serif;font-size:12px;color:#f5f0e8;outline:none;transition:border-color .2s;}
+.blg-search-in::placeholder{color:rgba(245,240,232,.3);}
+.blg-search-in:focus{border-color:#c9a84c;}
+.blg-search-btn{position:absolute;right:12px;top:50%;transform:translateY(-50%);background:none;border:none;color:#c9a84c;font-size:14px;cursor:pointer;padding:0;}
+
+/* Blog grid */
+.blg-layout{display:grid;grid-template-columns:1fr 286px;gap:40px;align-items:start;}
+.blg-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+
+/* Blog card */
+.bcard{display:flex;flex-direction:column;background:#111111;border:1px solid rgba(255,255,255,.07);border-radius:8px;overflow:hidden;text-decoration:none;transition:border-color .25s,transform .25s,box-shadow .25s;cursor:pointer;}
+.bcard:hover{border-color:rgba(201,168,76,.4);transform:translateY(-4px);box-shadow:0 18px 40px rgba(0,0,0,.5);}
+.bcard-img{height:180px;overflow:hidden;background:linear-gradient(135deg,#1a1a1a,#0f0f0f);display:flex;align-items:center;justify-content:center;flex-shrink:0;position:relative;}
+.bcard-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s ease;}
+.bcard:hover .bcard-img img{transform:scale(1.07);}
+.bcard-noimg{font-size:44px;opacity:.28;line-height:1;}
+.bcard-badge{position:absolute;top:9px;left:9px;font-size:8px;letter-spacing:.16em;text-transform:uppercase;padding:3px 8px;border-radius:100px;background:#c9a84c;color:#080808;font-weight:600;}
+.bcard-body{padding:15px;flex:1;display:flex;flex-direction:column;}
+.bcard-cat{font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:#c9a84c;margin-bottom:5px;}
+.bcard-title{font-family:'Cormorant Garamond',Georgia,serif;font-size:16px;font-weight:400;line-height:1.3;color:#f5f0e8;margin-bottom:8px;}
+.bcard-excerpt{font-size:11px;color:rgba(245,240,232,.48);line-height:1.65;flex:1;margin-bottom:11px;}
+.bcard-footer{display:flex;align-items:center;justify-content:space-between;font-size:10px;color:rgba(245,240,232,.28);}
+.bcard-readmore{color:#c9a84c;font-size:10px;letter-spacing:.05em;font-weight:500;}
+
+/* Sidebar */
+.blg-sidebar{}
+.blg-sw{background:#111111;border:1px solid rgba(255,255,255,.07);border-radius:8px;padding:20px;margin-bottom:16px;}
+.blg-sw-h{font-size:9px;letter-spacing:.28em;text-transform:uppercase;color:#c9a84c;margin-bottom:14px;}
+
+/* Recent list */
+.blg-recent-item{display:flex;gap:10px;padding:11px 0;border-bottom:1px solid rgba(255,255,255,.07);align-items:flex-start;}
+.blg-recent-item:last-child{border-bottom:none;}
+.blg-recent-thumb{width:48px;height:48px;border-radius:4px;overflow:hidden;background:#161616;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0;}
+.blg-recent-thumb img{width:100%;height:100%;object-fit:cover;display:block;}
+.blg-recent-cat{font-size:8px;letter-spacing:.18em;text-transform:uppercase;color:#c9a84c;margin-bottom:2px;}
+.blg-recent-title{font-size:11px;font-weight:500;color:#f5f0e8;line-height:1.32;text-decoration:none;display:block;transition:color .2s;}
+.blg-recent-title:hover{color:#c9a84c;}
+.blg-recent-date{font-size:9px;color:rgba(245,240,232,.28);margin-top:3px;}
+
+/* Category list */
+.blg-cat-list{list-style:none;padding:0;margin:0;}
+.blg-cat-list li{padding:7px 0;border-bottom:1px solid rgba(255,255,255,.07);display:flex;justify-content:space-between;align-items:center;}
+.blg-cat-list li:last-child{border-bottom:none;}
+.blg-cat-list a{font-size:12px;color:rgba(245,240,232,.5);text-decoration:none;transition:color .2s;cursor:pointer;}
+.blg-cat-list a:hover{color:#c9a84c;}
+.blg-cat-count{font-size:10px;color:rgba(245,240,232,.28);}
+
+/* No results */
+.blg-noresults{display:none;text-align:center;padding:52px 20px;color:rgba(245,240,232,.28);font-size:13px;}
+.blg-noresults a{color:#c9a84c;text-decoration:none;}
+
+/* Post counter */
+#blg-count{font-size:11px;color:rgba(245,240,232,.28);}
+
+/* Hidden class for filtering */
+.bcard.hidden{display:none!important;}
+
+/* ===== RESPONSIVE ===== */
+@media(max-width:1000px){
+  .blg-layout{grid-template-columns:1fr!important;}
+  .blg-grid{grid-template-columns:1fr 1fr!important;}
+  .blg-feat{grid-template-columns:1fr!important;min-height:auto!important;}
+  .blg-feat-img{min-height:220px;}
+  .blg-feat-overlay{background:linear-gradient(0deg,#111111 0%,transparent 55%)!important;}
+  .blg-feat-body{padding:24px 22px;}
+  .blg-search{max-width:100%;}
+}
+@media(max-width:600px){
+  .blg-grid{grid-template-columns:1fr!important;}
+  .blg-hero::after{display:none;}
+  .blg-filter-inner{flex-direction:column;align-items:flex-start;gap:10px;}
+}
+</style>
+<link rel="sitemap" type="application/xml" href="/sitemap.xml">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@acecarts">
+<meta name="twitter:title" content="Blog — Ace Ultra Premium Carts USA">
+<meta name="twitter:description" content="Flavor guides, product reviews, and ordering tutorials for Ace Ultra Premium Carts.">
+<meta name="twitter:image" content="https://acecarts.org/assets/images/berry-chill.webp">
+<meta name="twitter:url" content="https://acecarts.org/blog/">
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://acecarts.org/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://acecarts.org/blog/"}]}
+</script>
+</head>
+<body>
+
+<div id="announce-bar"><div class="announce-track">
+<span class="announce-item"><span class="announce-dot">●</span>Min order $100 USD — Free shipping over $250</span>
+<span class="announce-item" onclick="copyCode('ACECRYPTO1')"><span class="announce-dot">●</span>5% crypto discount — Code: ACECRYPTO1 &bull; Click to copy</span>
+<span class="announce-item"><span class="announce-dot">●</span>Ships from Los Angeles, CA · WhatsApp &amp; Telegram support</span>
+<span class="announce-item"><span class="announce-dot">●</span>Min order $100 USD — Free shipping over $250</span>
+<span class="announce-item" onclick="copyCode('ACECRYPTO1')"><span class="announce-dot">●</span>5% crypto discount — Code: ACECRYPTO1 &bull; Click to copy</span>
+<span class="announce-item"><span class="announce-dot">●</span>Ships from Los Angeles, CA · WhatsApp &amp; Telegram support</span>
+</div></div>
+
+<header id="site-header">
+<div class="header-inner">
+  <a href="/" class="logo">
+    <img src="/assets/images/logo.webp" alt="Ace Ultra Premium Carts Logo" class="logo-img" width="38" height="42">
+    <div class="logo-words"><b>Ace Ultra</b><small>Premium Carts</small></div>
+  </a>
+  <nav class="site-nav">
+    <a href="/" class="nav-a">Home</a>
+    <a href="/shop/" class="nav-a">Shop</a>
+    <a href="/blog/" class="nav-a active">Blog</a>
+    <a href="/how-to-order/" class="nav-a">How to Order</a>
+    <a href="/wholesale/" class="nav-a">Wholesale</a>
+    <a href="/about/" class="nav-a">About</a>
+    <a href="/contact/" class="nav-a">Contact</a>
+  </nav>
+  <div class="h-actions">
+    <a href="https://wa.me/14482348667" target="_blank" rel="noopener" class="h-icon" title="WhatsApp">💬</a>
+    <a href="https://t.me/Aceultrapremiumcarts01" target="_blank" rel="noopener" class="h-icon" title="Telegram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:inline-block;vertical-align:middle;"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L7.41 13.946l-2.96-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.738.613z" fill="#229ED9"/></svg></a>
+    <button class="h-icon h-cart" onclick="toggleCart()" title="Cart">🛒<span class="cart-badge"></span></button>
+    <button class="hamburger" onclick="toggleMobNav()"><span></span><span></span><span></span></button>
+  </div>
+</div>
+</header>
+
+<div id="mob-nav" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+  <div class="mob-nav-inner">
+    <button class="mob-close" onclick="toggleMobNav()" aria-label="Close menu">&#215;</button>
+    <a class="mob-nav-a" href="/" onclick="toggleMobNav()">Home</a>
+    <a class="mob-nav-a" href="/shop/" onclick="toggleMobNav()">Shop</a>
+    <a class="mob-nav-a" href="/blog/" onclick="toggleMobNav()">Blog</a>
+    <a class="mob-nav-a" href="/how-to-order/" onclick="toggleMobNav()">How to Order</a>
+    <a class="mob-nav-a" href="/wholesale/" onclick="toggleMobNav()">Wholesale</a>
+    <a class="mob-nav-a" href="/about/" onclick="toggleMobNav()">About</a>
+    <a class="mob-nav-a" href="/contact/" onclick="toggleMobNav()">Contact</a>
+    <div style="margin-top:32px;padding-top:24px;border-top:1px solid rgba(255,255,255,.1);display:flex;flex-direction:column;gap:12px;">
+      <a href="https://wa.me/14482348667" target="_blank" rel="noopener"
+         class="btn btn-gold" style="justify-content:center;font-size:13px;min-height:48px;"
+         onclick="toggleMobNav()">WhatsApp Us</a>
+      <a href="/checkout/" onclick="toggleMobNav()"
+         class="btn btn-outline" style="justify-content:center;font-size:13px;min-height:48px;">Checkout</a>
+    </div>
+  </div>
+</div>
+
+<!-- BLOG HERO -->
+<div class="blg-hero">
+  <div class="container">
+    <nav class="breadcrumb"><a href="/">Home</a><span>&#8250;</span><span>Blog</span></nav>
+    <h1 style="font-family:'Cormorant Garamond',Georgia,serif;font-size:clamp(32px,4.5vw,56px);font-weight:300;margin-top:16px;line-height:1.1;">Ace Ultra <em style="font-style:italic;color:#c9a84c;">Premium</em> Blog</h1>
+    <p style="font-size:14px;color:rgba(245,240,232,.5);max-width:480px;margin-top:12px;line-height:1.7;">Flavor guides, product reviews, ordering tutorials, and wholesale insights. Adults 21+ only.</p>
+  </div>
+</div>
+
+<!-- STICKY FILTER BAR -->
+<div class="blg-filters">
+  <div class="container">
+    <div class="blg-filter-inner">
+      <div class="filter-tabs" style="margin-bottom:0;">
+        <button class="ftab active" onclick="filterBlog('all',this)">All (20)</button>
+        <button class="ftab" onclick="filterBlog('product-guide',this)">Product Guides</button>
+        <button class="ftab" onclick="filterBlog('flavor-review',this)">Flavor Reviews</button>
+        <button class="ftab" onclick="filterBlog('how-to',this)">How To</button>
+        <button class="ftab" onclick="filterBlog('wholesale',this)">Wholesale</button>
+        <button class="ftab" onclick="filterBlog('comparison',this)">Comparisons</button>
+      </div>
+      <div class="blg-search">
+        <input type="search" class="blg-search-in" id="blg-search" placeholder="Search posts..." oninput="searchBlog(this.value)">
+        <button class="blg-search-btn" onclick="searchBlog(document.getElementById('blg-search').value)">&#128269;</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="section" style="background:#080808;padding-top:48px;">
+<div class="container">
+
+  <!-- FEATURED POST -->
+  <div class="label" style="margin-bottom:14px;">&#9733; Featured Article</div>
+  <a href="/blog/what-are-ace-ultra-premium-carts/" class="blg-feat">
+    <div class="blg-feat-img">
+      <img src="/assets/images/berry-chill.webp" alt="Ace Ultra Premium Carts 2025 complete guide Berry Chill 2G disposable vape" loading="eager" fetchpriority="high" width="800" height="600">
+      <div class="blg-feat-overlay"></div>
+    </div>
+    <div class="blg-feat-body">
+      <div class="blg-feat-badge">&#9733; Featured &middot; Product Guide</div>
+      <div class="blg-feat-title">What Are Ace Ultra Premium Carts? Complete 2025 Guide</div>
+      <p class="blg-feat-desc">7 collections, 130+ flavors, pricing, and where to buy authentic Ace Ultra Premium products. The complete guide for first-time and returning buyers at acecarts.org.</p>
+      <div class="blg-feat-meta">May 2025 &middot; 8 min read &middot; Product Guide</div>
+      <span class="blg-feat-read">Read Full Guide &#8594;</span>
+    </div>
+  </a>
+
+  <!-- COUNTER + GRID + SIDEBAR -->
+  <div class="blg-layout">
+
+    <div>
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;">
+        <div class="label">All Articles</div>
+        <span id="blg-count">20 articles</span>
+      </div>
+
+      <!-- ===== ALL 15 BLOG CARDS - STATIC HTML ===== -->
+      <div class="blg-grid" id="blg-grid">
+
+        <!-- 1 -->
+        <a href="/blog/ace-ultra-honeydew-harmony-review/" class="bcard" data-cat="flavor-review" data-search="honeydew harmony ace ultra review smooth melon gen 4 disposable">
+          <div class="bcard-img">
+            <img src="/assets/images/products/honeydew-harmony-blog.webp" alt="Honeydew Harmony Ace Ultra Premium 2G Gen 4 disposable vape review" loading="lazy" width="400" height="180" onerror="this.style.display='none'">
+            <span class="bcard-badge">Flavor Review</span>
+          </div>
+          <div class="bcard-body">
+            <div class="bcard-cat">Flavor Review</div>
+            <div class="bcard-title">Honeydew Harmony Ace Ultra Review: Smooth Melon Gen 4</div>
+            <div class="bcard-excerpt">Sweet, sun-ripened honeydew with a clean smooth finish. One of the easiest all-day Gen 4 flavors from Ace Ultra Premium.</div>
+            <div class="bcard-footer"><span>June 2025 &middot; 6 min</span><span class="bcard-readmore">Read More &#8594;</span></div>
+          </div>
+        </a>
+        <a href="/blog/ace-ultra-mojito-review/" class="bcard" data-cat="flavor-review" data-search="mojito ace ultra review lime mint gen 4 cocktail disposable">
+          <div class="bcard-img">
+            <img src="/assets/images/products/mojito-blog.webp" alt="Mojito Ace Ultra Premium 2G Gen 4 hybrid disposable vape review" loading="lazy" width="400" height="180" onerror="this.style.display='none'">
+            <span class="bcard-badge">Flavor Review</span>
+          </div>
+          <div class="bcard-body">
+            <div class="bcard-cat">Flavor Review</div>
+            <div class="bcard-title">Mojito Ace Ultra Review: Lime, Mint &amp; Gen 4 Freshness</div>
+            <div class="bcard-excerpt">Crisp lime, cool mint, and light sweetness in a cocktail-inspired Gen 4 disposable. A refreshing standout from Ace Ultra Premium.</div>
+            <div class="bcard-footer"><span>June 2025 &middot; 6 min</span><span class="bcard-readmore">Read More &#8594;</span></div>
+          </div>
+        </a>
+        <a href="/blog/ace-ultra-raspberry-lemonade-review/" class="bcard" data-cat="flavor-review" data-search="raspberry lemonade ace ultra review sweet tangy gen 4 disposable">
+          <div class="bcard-img">
+            <img src="/assets/images/products/raspberry-lemonade-blog.webp" alt="Raspberry Lemonade Ace Ultra Premium 2G Gen 4 disposable vape review" loading="lazy" width="400" height="180" onerror="this.style.display='none'">
+            <span class="bcard-badge">Flavor Review</span>
+          </div>
+          <div class="bcard-body">
+            <div class="bcard-cat">Flavor Review</div>
+            <div class="bcard-title">Raspberry Lemonade Ace Ultra Review: Sweet Meets Tangy</div>
+            <div class="bcard-excerpt">Juicy raspberry meets tangy lemon in a perfectly balanced Gen 4 disposable. A bright, refreshing Ace Ultra Premium favorite.</div>
+            <div class="bcard-footer"><span>June 2025 &middot; 6 min</span><span class="bcard-readmore">Read More &#8594;</span></div>
+          </div>
+        </a>
+        <a href="/blog/ace-ultra-peach-rings-review/" class="bcard" data-cat="flavor-review" data-search="peach rings ace ultra review candy sweet gen 4 disposable">
+          <div class="bcard-img">
+            <img src="/assets/images/products/peach-rings-blog.webp" alt="Peach Rings Ace Ultra Premium 2G Gen 4 disposable vape review" loading="lazy" width="400" height="180" onerror="this.style.display='none'">
+            <span class="bcard-badge">Flavor Review</span>
+          </div>
+          <div class="bcard-body">
+            <div class="bcard-cat">Flavor Review</div>
+            <div class="bcard-title">Peach Rings Ace Ultra Review: Candy-Sweet Gen 4 Flavor</div>
+            <div class="bcard-excerpt">Authentic candy-sweet peach with a smooth clean finish. A nostalgic, crowd-pleasing Gen 4 disposable from Ace Ultra Premium.</div>
+            <div class="bcard-footer"><span>June 2025 &middot; 6 min</span><span class="bcard-readmore">Read More &#8594;</span></div>
+          </div>
+        </a>
+        <a href="/blog/ace-ultra-spring-edition-mini-2g-guide/" class="bcard" data-cat="product-guide" data-search="ace ultra spring edition mini 2g guide flavors wholesale seasonal collection">
+          <div class="bcard-img">
+            <img src="/assets/images/products/spring-edition-mini-2g.webp" alt="Ace Ultra Spring Edition Mini 2G disposable vape collection guide" loading="lazy" width="400" height="180" onerror="this.style.display='none'">
+            <span class="bcard-badge">Product Guide</span>
+          </div>
+          <div class="bcard-body">
+            <div class="bcard-cat">Product Guide</div>
+            <div class="bcard-title">Ace Ultra Spring Edition Mini 2G: Flavors &amp; Buyer Guide</div>
+            <div class="bcard-excerpt">The compact seasonal collection — bright fruity flavors, wholesale master-box options, and where to buy Ace Ultra Premium carts.</div>
+            <div class="bcard-footer"><span>June 2025 &middot; 7 min</span><span class="bcard-readmore">Read More &#8594;</span></div>
+          </div>
+        </a>
+        <a href="/blog/what-are-ace-ultra-premium-carts/" class="bcard" data-cat="product-guide" data-search="what are ace ultra premium carts complete 2025 guide product">
+          <div class="bcard-img">
+            <img src="/assets/images/berry-chill.webp" alt="Ace Ultra Premium Carts complete 2025 guide product lineup" loading="lazy" width="400" height="180">
+            <span class="bcard-badge">Product Guide</span>
+          </div>
+          <div class="bcard-body">
+            <div class="bcard-cat">Product Guide</div>
+            <div class="bcard-title">What Are Ace Ultra Premium Carts? Complete 2025 Guide</div>
+            <div class="bcard-excerpt">7 collections, 130+ flavors, pricing, and where to buy. Everything a new or returning buyer needs to know.</div>
+            <div class="bcard-footer"><span>May 2025 &middot; 8 min</span><span class="bcard-readmore">Read More &#8594;</span></div>
+          </div>
+        </a>
+
+        <!-- 2 -->
+        <a href="/blog/berry-chill-review/" class="bcard" data-cat="flavor-review" data-search="berry chill ace ultra premium review taste effects flavor">
+          <div class="bcard-img">
+            <img src="/assets/images/berry-chill.webp" alt="Berry Chill Ace Ultra Premium 2G disposable vape flavor review" loading="lazy" width="400" height="180">
+            <span class="bcard-badge">Flavor Review</span>
+          </div>
+          <div class="bcard-body">
+            <div class="bcard-cat">Flavor Review</div>
+            <div class="bcard-title">Berry Chill Ace Ultra Review: Taste, Effects &amp; How to Order</div>
+            <div class="bcard-excerpt">Icy mixed berry, strawberry notes, effects: Relaxed, Inspired, Peaceful. Full taste profile and how to order.</div>
+            <div class="bcard-footer"><span>May 2025 &middot; 7 min</span><span class="bcard-readmore">Read More &#8594;</span></div>
+          </div>
+        </a>
+
+        <!-- 3 -->
+        <a href="/blog/top-10-ace-ultra-flavors-2025/" class="bcard" data-cat="flavor-review" data-search="top 10 ace ultra premium flavors ranked 2025 best picks">
+          <div class="bcard-img">
+            <img src="/assets/images/products/tigers-blood.webp" alt="Top 10 Ace Ultra Premium flavors 2025 Tigers Blood ranked" loading="lazy" width="400" height="180" onerror="this.style.display='none'">
+            <span class="bcard-badge">Flavor Review</span>
+          </div>
+          <div class="bcard-body">
+            <div class="bcard-cat">Flavor Review</div>
+            <div class="bcard-title">Top 10 Ace Ultra Premium Flavors Ranked 2025</div>
+            <div class="bcard-excerpt">Tiger's Blood, Berry Chill, Lunar Lychee Ice, Dragon Fruit Bliss and 6 more — ranked by taste and popularity.</div>
+            <div class="bcard-footer"><span>May 2025 &middot; 6 min</span><span class="bcard-readmore">Read More &#8594;</span></div>
+          </div>
+        </a>
+
+        <!-- 4 -->
+        <a href="/blog/ace-ultra-signature-collection-guide/" class="bcard" data-cat="product-guide" data-search="ace ultra signature collection guide all flavors pricing reviews">
+          <div class="bcard-img">
+            <img src="/assets/images/products/banana-taffy-hybrid.webp" alt="Ace Ultra Premium Signature Collection 2G disposable vape flavors guide" loading="lazy" width="400" height="180" onerror="this.style.display='none'">
+            <span class="bcard-badge">Product Guide</span>
+          </div>
+          <div class="bcard-body">
+            <div class="bcard-cat">Product Guide</div>
+            <div class="bcard-title">Ace Ultra Signature Collection: All 8 Flavors Reviewed</div>
+            <div class="bcard-excerpt">Banana Taffy, Berry Bash, Berry Ice, Bubblegum Burst, Fruit Loops, Grape Stars, Mango Bliss, Peach Paradise.</div>
+            <div class="bcard-footer"><span>May 2025 &middot; 7 min</span><span class="bcard-readmore">Read More &#8594;</span></div>
+          </div>
+        </a>
+
+        <!-- 5 -->
+        <a href="/blog/ace-ultra-spring-edition-review/" class="bcard" data-cat="flavor-review" data-search="ace ultra spring edition review 18 new flavors ranked 2025">
+          <div class="bcard-img">
+            <img src="/assets/images/products/rainbow-sherbet-sativa.webp" alt="Ace Ultra Premium Spring Edition 2G disposable Rainbow Sherbet review" loading="lazy" width="400" height="180" onerror="this.style.display='none'">
+            <span class="bcard-badge">Flavor Review</span>
+          </div>
+          <div class="bcard-body">
+            <div class="bcard-cat">Flavor Review</div>
+            <div class="bcard-title">Ace Ultra Spring Edition: All 18 New Flavors Reviewed</div>
+            <div class="bcard-excerpt">Rainbow Sherbet, Zombie Zest, Serenity Cheesecake, Pineapple Twist — all 18 Spring Edition flavors ranked.</div>
+            <div class="bcard-footer"><span>May 2025 &middot; 7 min</span><span class="bcard-readmore">Read More &#8594;</span></div>
+          </div>
+        </a>
+
+        <!-- 6 -->
+        <a href="/blog/ace-ultra-black-badge-collection-review/" class="bcard" data-cat="product-guide" data-search="ace ultra black badge collection review flavor guide premium">
+          <div class="bcard-img">
+            <img src="/assets/images/products/strawberry-dream-sativa.webp" alt="Ace Ultra Premium Black Badge Collection 2G disposable vape review" loading="lazy" width="400" height="180" onerror="this.style.display='none'">
+            <span class="bcard-badge">Product Guide</span>
+          </div>
+          <div class="bcard-body">
+            <div class="bcard-cat">Product Guide</div>
+            <div class="bcard-title">Ace Ultra Black Badge Collection: Full Review &amp; Flavor Guide</div>
+            <div class="bcard-excerpt">Rose Serenade, Strawberry Dream, Lychee Sorbet and more — the premium Black Badge Collection reviewed.</div>
+            <div class="bcard-footer"><span>May 2025 &middot; 6 min</span><span class="bcard-readmore">Read More &#8594;</span></div>
+          </div>
+        </a>
+
+        <!-- 7 -->
+        <a href="/blog/how-to-order-ace-ultra-premium-carts/" class="bcard" data-cat="how-to" data-search="how to order ace ultra premium carts online step by step guide">
+          <div class="bcard-img">
+            <div class="bcard-noimg">&#128203;</div>
+            <span class="bcard-badge">How To</span>
+          </div>
+          <div class="bcard-body">
+            <div class="bcard-cat">How To</div>
+            <div class="bcard-title">How to Order Ace Ultra Premium Carts Online</div>
+            <div class="bcard-excerpt">Complete step-by-step guide — from browsing 130+ products to crypto checkout and LA delivery.</div>
+            <div class="bcard-footer"><span>May 2025 &middot; 6 min</span><span class="bcard-readmore">Read More &#8594;</span></div>
+          </div>
+        </a>
+
+        <!-- 8 -->
+        <a href="/blog/how-to-buy-with-crypto/" class="bcard" data-cat="how-to" data-search="how to buy ace ultra carts with crypto bitcoin ethereum usdt payment">
+          <div class="bcard-img">
+            <div class="bcard-noimg">&#128274;</div>
+            <span class="bcard-badge">How To</span>
+          </div>
+          <div class="bcard-body">
+            <div class="bcard-cat">How To</div>
+            <div class="bcard-title">How to Buy Ace Ultra Carts with Crypto</div>
+            <div class="bcard-excerpt">Pay with BTC, ETH, USDT, SOL, XRP, or BNB. Get 5% off with code ACECRYPTO1. Full step-by-step guide.</div>
+            <div class="bcard-footer"><span>May 2025 &middot; 5 min</span><span class="bcard-readmore">Read More &#8594;</span></div>
+          </div>
+        </a>
+
+        <!-- 9 -->
+        <a href="/blog/ace-ultra-4g-gen2-complete-review/" class="bcard" data-cat="product-guide" data-search="ace ultra 4g gen 2 disposable complete review all 20 flavors">
+          <div class="bcard-img">
+            <img src="/assets/images/products/ace-4-gram-disposable.jpg" alt="Ace Ultra Premium 4G Gen 2 disposable vape complete review 20 flavors" loading="lazy" width="400" height="180" onerror="this.style.display='none'">
+            <span class="bcard-badge">Product Guide</span>
+          </div>
+          <div class="bcard-body">
+            <div class="bcard-cat">Product Guide</div>
+            <div class="bcard-title">Ace Ultra 4G Gen 2 Disposable: Full Review + All 20 Flavors</div>
+            <div class="bcard-excerpt">4G Gen 2 doubles the capacity — reviewed for battery, draw, and all 20 flavors including Jolly Rancher.</div>
+            <div class="bcard-footer"><span>May 2025 &middot; 8 min</span><span class="bcard-readmore">Read More &#8594;</span></div>
+          </div>
+        </a>
+
+        <!-- 10 -->
+        <a href="/blog/ace-ultra-wholesale-master-box-guide/" class="bcard" data-cat="wholesale" data-search="ace ultra wholesale master box guide pricing ordering dispensary">
+          <div class="bcard-img">
+            <img src="/assets/images/products/ace-ultra-4th-gen-2g-100pcs-variety-master-box.webp" alt="Ace Ultra Premium wholesale master box 100 pcs variety dispensary bulk" loading="lazy" width="400" height="180" onerror="this.style.display='none'">
+            <span class="bcard-badge">Wholesale</span>
+          </div>
+          <div class="bcard-body">
+            <div class="bcard-cat">Wholesale</div>
+            <div class="bcard-title">Ace Ultra Wholesale Master Box Guide</div>
+            <div class="bcard-excerpt">All master box SKUs, pricing from $200 to $3,500, and how to set up bulk ordering for dispensaries.</div>
+            <div class="bcard-footer"><span>May 2025 &middot; 6 min</span><span class="bcard-readmore">Read More &#8594;</span></div>
+          </div>
+        </a>
+
+        <!-- 11 -->
+        <a href="/blog/ace-ultra-love-edition-vs-spring-edition/" class="bcard" data-cat="comparison" data-search="ace ultra love edition vs spring edition comparison which to buy">
+          <div class="bcard-img">
+            <img src="/assets/images/products/dragon-fruit-bliss-hybrid.webp" alt="Ace Ultra Love Edition vs Spring Edition 2G disposable comparison" loading="lazy" width="400" height="180" onerror="this.style.display='none'">
+            <span class="bcard-badge">Comparison</span>
+          </div>
+          <div class="bcard-body">
+            <div class="bcard-cat">Comparison</div>
+            <div class="bcard-title">Ace Ultra Love Edition vs Spring Edition</div>
+            <div class="bcard-excerpt">12 Love Edition flavors vs 18 Spring Edition flavors — taste profiles, pricing, and which is right for you.</div>
+            <div class="bcard-footer"><span>May 2025 &middot; 6 min</span><span class="bcard-readmore">Read More &#8594;</span></div>
+          </div>
+        </a>
+
+        <!-- 12 -->
+        <a href="/blog/where-to-buy-ace-ultra-premium-carts/" class="bcard" data-cat="how-to" data-search="where to buy ace ultra premium carts online only acecarts.org authentic">
+          <div class="bcard-img">
+            <div class="bcard-noimg">&#128722;</div>
+            <span class="bcard-badge">How To</span>
+          </div>
+          <div class="bcard-body">
+            <div class="bcard-cat">How To</div>
+            <div class="bcard-title">Where to Buy Ace Ultra Premium Carts Online</div>
+            <div class="bcard-excerpt">The only trusted online source — LA warehouse, crypto payments, 7-day support, authentic products guaranteed.</div>
+            <div class="bcard-footer"><span>May 2025 &middot; 4 min</span><span class="bcard-readmore">Read More &#8594;</span></div>
+          </div>
+        </a>
+
+        <!-- 13 -->
+        <a href="/blog/tigers-blood-ace-ultra-review/" class="bcard" data-cat="flavor-review" data-search="tigers blood ace ultra premium full flavor review gen 4 top selling">
+          <div class="bcard-img">
+            <img src="/assets/images/products/tigers-blood.webp" alt="Tigers Blood Ace Ultra Premium 2G Gen 4 disposable vape flavor review" loading="lazy" width="400" height="180" onerror="this.style.display='none'">
+            <span class="bcard-badge">Flavor Review</span>
+          </div>
+          <div class="bcard-body">
+            <div class="bcard-cat">Flavor Review</div>
+            <div class="bcard-title">Tiger's Blood Ace Ultra Premium Review</div>
+            <div class="bcard-excerpt">The #1 ordered Gen 4 flavor — strawberry, watermelon, coconut blend. Why it's the most reordered Ace Ultra flavor.</div>
+            <div class="bcard-footer"><span>May 2025 &middot; 5 min</span><span class="bcard-readmore">Read More &#8594;</span></div>
+          </div>
+        </a>
+
+        <!-- 14 -->
+        <a href="/blog/ace-ultra-shipping-guide-2025/" class="bcard" data-cat="how-to" data-search="ace ultra premium carts shipping guide 2025 la to your door delivery">
+          <div class="bcard-img">
+            <div class="bcard-noimg">&#128640;</div>
+            <span class="bcard-badge">How To</span>
+          </div>
+          <div class="bcard-body">
+            <div class="bcard-cat">How To</div>
+            <div class="bcard-title">Ace Ultra Premium Carts Shipping Guide 2025</div>
+            <div class="bcard-excerpt">Processing times, discreet packaging, tracking, free shipping over $250, and international delivery info.</div>
+            <div class="bcard-footer"><span>May 2025 &middot; 4 min</span><span class="bcard-readmore">Read More &#8594;</span></div>
+          </div>
+        </a>
+
+        <!-- 15 -->
+        <a href="/blog/ace-ultra-disposables-for-dispensaries/" class="bcard" data-cat="wholesale" data-search="best ace ultra premium products for dispensaries 2025 buyer guide wholesale">
+          <div class="bcard-img">
+            <img src="/assets/images/products/ace-ultra-signature-gold-collection2g-100pcs-variety-master-box.webp" alt="Ace Ultra Premium products for dispensaries wholesale 2025 buyer guide" loading="lazy" width="400" height="180" onerror="this.style.display='none'">
+            <span class="bcard-badge">Wholesale</span>
+          </div>
+          <div class="bcard-body">
+            <div class="bcard-cat">Wholesale</div>
+            <div class="bcard-title">Best Ace Ultra Products for Dispensaries — 2025 Guide</div>
+            <div class="bcard-excerpt">Signature Gold, Black Badge, Love Edition master boxes compared for dispensary wholesale buyers.</div>
+            <div class="bcard-footer"><span>May 2025 &middot; 5 min</span><span class="bcard-readmore">Read More &#8594;</span></div>
+          </div>
+        </a>
+
+
+        <!-- 16 -->
+        <a href="/blog/ace-ultra-premium-gummies-review/" class="bcard" data-cat="flavor-review" data-search="ace ultra premium gummies review effects flavors where to buy">
+          <div class="bcard-img">
+            <img src="/assets/images/products/ace-ultra-premium-gummies.webp" alt="Ace Ultra Premium Gummies mixed flavors product review" loading="lazy" width="400" height="180" onerror="this.style.display='none'">
+            <span class="bcard-badge">Flavor Review</span>
+          </div>
+          <div class="bcard-body">
+            <div class="bcard-cat">Flavor Review</div>
+            <div class="bcard-title">Ace Ultra Premium Gummies Review: Effects, Flavors &amp; Where to Buy</div>
+            <div class="bcard-excerpt">Mixed fruit flavors, effects profile, and how to order Ace Ultra Premium Gummies from acecarts.org. Adults 21+ only.</div>
+            <div class="bcard-footer"><span>May 2025 &middot; 5 min</span><span class="bcard-readmore">Read More &#8594;</span></div>
+          </div>
+        </a>
+
+        <!-- 17 -->
+        <a href="/blog/ace-ultra-2g-vs-4g-disposable-comparison/" class="bcard" data-cat="comparison" data-search="ace ultra 2g vs 4g disposable comparison which to buy size">
+          <div class="bcard-img">
+            <img src="/assets/images/products/ace-4-gram-disposable.webp" alt="Ace Ultra Premium 2G vs 4G Gen 2 disposable size comparison" loading="lazy" width="400" height="180" onerror="this.style.display='none'">
+            <span class="bcard-badge">Comparison</span>
+          </div>
+          <div class="bcard-body">
+            <div class="bcard-cat">Comparison</div>
+            <div class="bcard-title">Ace Ultra 2G vs 4G Disposable: Which Should You Buy?</div>
+            <div class="bcard-excerpt">Side-by-side comparison of capacity, battery, flavors, and pricing. Which Ace Ultra size is right for you?</div>
+            <div class="bcard-footer"><span>May 2025 &middot; 5 min</span><span class="bcard-readmore">Read More &#8594;</span></div>
+          </div>
+        </a>
+
+        <!-- 18 -->
+        <a href="/blog/ace-ultra-love-edition-complete-guide/" class="bcard" data-cat="product-guide" data-search="ace ultra love edition complete guide all flavors reviewed">
+          <div class="bcard-img">
+            <img src="/assets/images/products/dragon-fruit-bliss-hybrid.webp" alt="Ace Ultra Premium Love Edition Dragon Fruit Bliss complete guide" loading="lazy" width="400" height="180" onerror="this.style.display='none'">
+            <span class="bcard-badge">Product Guide</span>
+          </div>
+          <div class="bcard-body">
+            <div class="bcard-cat">Product Guide</div>
+            <div class="bcard-title">Ace Ultra Love Edition Complete Guide: All Flavors Reviewed</div>
+            <div class="bcard-excerpt">Dragon Fruit Bliss, Peach Rings, Red Velvet, Ghost Train, Lychee Blossom — all Love Edition flavors reviewed with effects and pricing.</div>
+            <div class="bcard-footer"><span>May 2025 &middot; 7 min</span><span class="bcard-readmore">Read More &#8594;</span></div>
+          </div>
+        </a>
+
+        <!-- 19 -->
+        <a href="/blog/ace-ultra-wholesale-pricing-guide-2025/" class="bcard" data-cat="wholesale" data-search="ace ultra premium wholesale pricing 2025 dispensary bulk deals">
+          <div class="bcard-img">
+            <img src="/assets/images/products/ace-ultra-4th-gen-2g-100pcs-variety-master-box.webp" alt="Ace Ultra Premium wholesale pricing 2025 master box 100pc" loading="lazy" width="400" height="180" onerror="this.style.display='none'">
+            <span class="bcard-badge">Wholesale</span>
+          </div>
+          <div class="bcard-body">
+            <div class="bcard-cat">Wholesale</div>
+            <div class="bcard-title">Ace Ultra Wholesale Pricing 2025 — Best Deals for Dispensaries</div>
+            <div class="bcard-excerpt">Complete wholesale pricing — all master box SKUs, per-unit costs from $15, and how to set up bulk ordering at acecarts.org.</div>
+            <div class="bcard-footer"><span>May 2025 &middot; 6 min</span><span class="bcard-readmore">Read More &#8594;</span></div>
+          </div>
+        </a>
+
+        <!-- 20 -->
+        <a href="/blog/ace-ultra-watermelon-mint-review/" class="bcard" data-cat="flavor-review" data-search="watermelon mint ace ultra review cool crisp refreshing gen 4">
+          <div class="bcard-img">
+            <img src="/assets/images/products/watermelon-mint.webp" alt="Watermelon Mint Ace Ultra Premium 2G Gen 4 disposable vape review" loading="lazy" width="400" height="180" onerror="this.style.display='none'">
+            <span class="bcard-badge">Flavor Review</span>
+          </div>
+          <div class="bcard-body">
+            <div class="bcard-cat">Flavor Review</div>
+            <div class="bcard-title">Watermelon Mint Ace Ultra Premium Review</div>
+            <div class="bcard-excerpt">Crisp watermelon sweetness with clean mint finish. One of the top-selling Gen 4 refreshing flavors from Ace Ultra Premium.</div>
+            <div class="bcard-footer"><span>May 2025 &middot; 5 min</span><span class="bcard-readmore">Read More &#8594;</span></div>
+          </div>
+        </a>
+
+      </div><!-- /blg-grid -->
+
+      <div class="blg-noresults" id="blg-noresults">
+        No posts found. <a href="#" onclick="resetBlog();return false;">Show all posts &#8594;</a>
+      </div>
+    </div>
+
+    <!-- SIDEBAR -->
+    <aside>
+
+      <!-- Recent Posts -->
+      <div class="blg-sw">
+        <div class="blg-sw-h">Recent Posts</div>
+        <div class="blg-recent-item"><div class="blg-recent-thumb"><img src="/assets/images/berry-chill.webp" alt="Berry Chill Review" loading="lazy"></div><div><div class="blg-recent-cat">Flavor Review</div><a href="/blog/berry-chill-review/" class="blg-recent-title">Berry Chill Review</a><div class="blg-recent-date">May 2025</div></div></div>
+        <div class="blg-recent-item"><div class="blg-recent-thumb"><img src="/assets/images/products/tigers-blood.webp" alt="Tiger's Blood" loading="lazy" onerror="this.style.display='none'"></div><div><div class="blg-recent-cat">Flavor Review</div><a href="/blog/tigers-blood-ace-ultra-review/" class="blg-recent-title">Tiger's Blood Review</a><div class="blg-recent-date">May 2025</div></div></div>
+        <div class="blg-recent-item"><div class="blg-recent-thumb"><img src="/assets/images/products/rainbow-sherbet-sativa.webp" alt="Spring Edition" loading="lazy" onerror="this.style.display='none'"></div><div><div class="blg-recent-cat">Flavor Review</div><a href="/blog/ace-ultra-spring-edition-review/" class="blg-recent-title">Spring Edition Review</a><div class="blg-recent-date">May 2025</div></div></div>
+        <div class="blg-recent-item"><div class="blg-recent-thumb" style="font-size:18px;">&#128274;</div><div><div class="blg-recent-cat">How To</div><a href="/blog/how-to-buy-with-crypto/" class="blg-recent-title">Buy with Crypto Guide</a><div class="blg-recent-date">May 2025</div></div></div>
+        <div class="blg-recent-item"><div class="blg-recent-thumb"><img src="/assets/images/products/ace-ultra-4th-gen-2g-100pcs-variety-master-box.webp" alt="Wholesale Guide" loading="lazy" onerror="this.style.display='none'"></div><div><div class="blg-recent-cat">Wholesale</div><a href="/blog/ace-ultra-wholesale-master-box-guide/" class="blg-recent-title">Wholesale Master Box Guide</a><div class="blg-recent-date">May 2025</div></div></div>
+      </div>
+
+      <!-- Categories -->
+      <div class="blg-sw">
+        <div class="blg-sw-h">Categories</div>
+        <ul class="blg-cat-list">
+          <li><a onclick="filterBlog('product-guide',null)">Product Guides</a><span class="blg-cat-count">4</span></li>
+          <li><a onclick="filterBlog('flavor-review',null)">Flavor Reviews</a><span class="blg-cat-count">4</span></li>
+          <li><a onclick="filterBlog('how-to',null)">How To</a><span class="blg-cat-count">4</span></li>
+          <li><a onclick="filterBlog('wholesale',null)">Wholesale</a><span class="blg-cat-count">2</span></li>
+          <li><a onclick="filterBlog('comparison',null)">Comparisons</a><span class="blg-cat-count">1</span></li>
+        </ul>
+      </div>
+
+      <!-- Shop CTA -->
+      <div class="blg-sw" style="border-color:rgba(201,168,76,.25);background:rgba(201,168,76,.04);text-align:center;">
+        <img src="/assets/images/logo.webp" alt="Ace Ultra Premium Carts" width="48" height="52" style="object-fit:contain;margin:0 auto 12px;display:block;" loading="lazy">
+        <div style="font-family:'Cormorant Garamond',Georgia,serif;font-size:18px;margin-bottom:8px;color:#f5f0e8;">Shop Ace Ultra</div>
+        <p style="font-size:11px;color:rgba(245,240,232,.5);margin-bottom:14px;">130+ products &middot; Min $100 &middot; Ships from LA</p>
+        <a href="/shop/" class="btn btn-gold" style="width:100%;justify-content:center;font-size:10px;">&#9824; Shop All Products</a>
+        <a href="/how-to-order/" style="display:block;margin-top:10px;font-size:10px;color:rgba(245,240,232,.28);letter-spacing:.08em;text-transform:uppercase;">How to Order &#8594;</a>
+      </div>
+
+      <!-- Coupon -->
+      <div class="blg-sw" style="border-color:rgba(201,168,76,.2);">
+        <div class="blg-sw-h">First Order Discount</div>
+        <p style="font-size:11px;color:rgba(245,240,232,.5);margin-bottom:12px;">5% off your first crypto payment.</p>
+        <div onclick="copyCode('ACECRYPTO1')" style="display:flex;align-items:center;gap:8px;background:#0d0d0d;border:1px solid rgba(201,168,76,.25);border-radius:4px;padding:10px 14px;cursor:pointer;">
+          <span style="font-family:monospace;font-size:14px;color:#c9a84c;font-weight:500;flex:1;">ACECRYPTO1</span>
+          <span style="font-size:10px;color:rgba(245,240,232,.28);">Copy</span>
+        </div>
+      </div>
+
+      <!-- Internal Links -->
+      <div class="blg-sw">
+        <div class="blg-sw-h">Quick Links</div>
+        <ul style="list-style:none;padding:0;margin:0;">
+          <li style="padding:6px 0;border-bottom:1px solid rgba(255,255,255,.07);"><a href="/" style="font-size:12px;color:rgba(245,240,232,.5);text-decoration:none;">&#8594; Home</a></li>
+          <li style="padding:6px 0;border-bottom:1px solid rgba(255,255,255,.07);"><a href="/shop/" style="font-size:12px;color:rgba(245,240,232,.5);text-decoration:none;">&#8594; Shop All Products</a></li>
+          <li style="padding:6px 0;border-bottom:1px solid rgba(255,255,255,.07);"><a href="/how-to-order/" style="font-size:12px;color:rgba(245,240,232,.5);text-decoration:none;">&#8594; How to Order</a></li>
+          <li style="padding:6px 0;border-bottom:1px solid rgba(255,255,255,.07);"><a href="/wholesale/" style="font-size:12px;color:rgba(245,240,232,.5);text-decoration:none;">&#8594; Wholesale</a></li>
+          <li style="padding:6px 0;border-bottom:1px solid rgba(255,255,255,.07);"><a href="/about/" style="font-size:12px;color:rgba(245,240,232,.5);text-decoration:none;">&#8594; About Us</a></li>
+          <li style="padding:6px 0;"><a href="/contact/" style="font-size:12px;color:rgba(245,240,232,.5);text-decoration:none;">&#8594; Contact</a></li>
+        </ul>
+      </div>
+
+    </aside>
+  </div><!-- /blg-layout -->
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer id="site-footer"><div class="container">
+  <div class="footer-grid">
+    <div class="fc">
+      <a href="/" class="logo" style="margin-bottom:14px;display:inline-flex;">
+        <img src="/assets/images/logo.webp" alt="Ace Ultra Premium Carts" class="logo-img" width="38" height="42" loading="lazy">
+        <div class="logo-words"><b>Ace Ultra</b><small>Premium Carts</small></div>
+      </a>
+      <p>Premium vape products. Los Angeles, CA. Adults 21+ only.</p>
+      <div class="f-social">
+        <a href="https://wa.me/14482348667" target="_blank" rel="noopener" class="f-soc" title="WhatsApp">&#128172;</a>
+        <a href="https://t.me/Aceultrapremiumcarts01" target="_blank" rel="noopener" class="f-soc" title="Telegram">&#9992;&#65039;</a>
+        <a href="mailto:info@acecarts.org" class="f-soc" title="Email" >&#9993;&#65039;</a>
+      </div>
+    </div>
+    <div class="fc"><h4>Shop</h4><ul>
+      <li><a href="/shop/">All Products</a></li>
+      <li><a href="/shop/?cat=signature">Signature Collection</a></li>
+      <li><a href="/shop/?cat=love">Love Edition</a></li>
+      <li><a href="/shop/?cat=spring">Spring Edition</a></li>
+      <li><a href="/shop/?cat=black">Black Badge</a></li>
+      <li><a href="/wholesale/">Wholesale</a></li>
+    </ul></div>
+    <div class="fc"><h4>Top Posts</h4><ul>
+      <li><a href="/blog/what-are-ace-ultra-premium-carts/">What Are Ace Carts?</a></li>
+      <li><a href="/blog/berry-chill-review/">Berry Chill Review</a></li>
+      <li><a href="/blog/top-10-ace-ultra-flavors-2025/">Top 10 Flavors 2025</a></li>
+      <li><a href="/blog/how-to-buy-with-crypto/">Buy with Crypto</a></li>
+      <li><a href="/blog/ace-ultra-wholesale-master-box-guide/">Wholesale Guide</a></li>
+      <li><a href="/blog/tigers-blood-ace-ultra-review/">Tiger's Blood Review</a></li>
+    </ul></div>
+    <div class="fc"><h4>Company</h4><ul>
+      <li><a href="/about/">About</a></li>
+      <li><a href="/how-to-order/">How to Order</a></li>
+      <li><a href="/contact/">Contact</a></li>
+      <li><a href="/shipping-policy/">Shipping Policy</a></li>
+      <li><a href="/privacy-policy/">Privacy Policy</a></li>
+      <li><a href="/terms-and-conditions/">Terms</a></li>
+    </ul></div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">&#169; 2025 Ace Ultra Premium Carts USA &middot; acecarts.org &middot; Los Angeles, CA<br>For adults 21+ only. Not for sale to minors.</div>
+    <span class="age-pill">&#9824; 21+ Only</span>
+  </div>
+</div></footer>
+
+<a href="https://wa.me/14482348667" target="_blank" rel="noopener" id="wa-float" title="Chat on WhatsApp">&#128172;</a>
+<div id="cart-overlay" onclick="toggleCart()"></div>
+<div id="cart-drawer"><div class="drawer-head"><span class="drawer-title">Cart &#9824;</span><button class="drawer-x" onclick="toggleCart()">&#10005;</button></div><div class="drawer-body" id="drawer-body"></div><div class="drawer-foot"><div class="min-notice" id="min-notice">&#9888; Min $100 USD.</div><div class="subtotal-row"><span>Subtotal</span><strong id="subtotal-val">$0.00</strong></div><div class="coupon-row"><input class="coupon-in" id="coupon-input" placeholder="Coupon code"><button class="coupon-btn" onclick="applyCoupon()">Apply</button></div><button class="btn-checkout" onclick="checkout()">Checkout &#8594;</button></div></div>
+<div id="qv-overlay" onclick="closeQV(event)"><div class="qv-box"><div class="qv-img"><button class="qv-close" onclick="closeQV()">&#10005;</button><span id="qv-emoji">&#9824;</span></div><div class="qv-content"><div class="qv-cat" id="qv-cat"></div><div class="qv-name" id="qv-name"></div><div class="qv-var" id="qv-var"></div><div class="qv-desc" id="qv-desc"></div><div class="qv-price" id="qv-price"></div><div class="qv-qty"><span class="qv-qty-label">Qty</span><div class="qv-qty-ctrl"><button class="qv-qb" onclick="changeQVQty(-1)">&#8722;</button><span class="qv-qn" id="qv-qty-n">1</span><button class="qv-qb" onclick="changeQVQty(1)">+</button></div></div><button class="qv-add" onclick="addFromQV()">Add to Cart</button><div class="qv-tags" id="qv-tags"></div></div></div></div>
+<div id="toast"><span>&#10003;</span><span class="toast-msg"></span></div>
+
+<script src="/assets/js/app.js"></script>
+<script>
+// Blog filter + search — operates on static HTML cards
+function filterBlog(cat, btn) {
+  document.querySelectorAll('.ftab').forEach(function(t){ t.classList.remove('active'); });
+  if (btn) {
+    btn.classList.add('active');
+  } else {
+    document.querySelectorAll('.ftab').forEach(function(t){
+      var oc = t.getAttribute('onclick') || '';
+      if (oc.indexOf("'" + cat + "'") !== -1) t.classList.add('active');
+    });
+  }
+  document.getElementById('blg-search').value = '';
+  var cards = document.querySelectorAll('.bcard');
+  var shown = 0;
+  cards.forEach(function(c){
+    var show = (cat === 'all') || (c.getAttribute('data-cat') === cat);
+    c.classList.toggle('hidden', !show);
+    if (show) shown++;
+  });
+  document.getElementById('blg-count').textContent = shown + (shown === 1 ? ' article' : ' articles');
+  document.getElementById('blg-noresults').style.display = shown === 0 ? 'block' : 'none';
+}
+
+function searchBlog(q) {
+  var lq = (q || '').toLowerCase().trim();
+  if (!lq) { resetBlog(); return; }
+  document.querySelectorAll('.ftab').forEach(function(t){ t.classList.remove('active'); });
+  var cards = document.querySelectorAll('.bcard');
+  var shown = 0;
+  cards.forEach(function(c){
+    var hay = (c.getAttribute('data-search') || '') + ' ' +
+              (c.querySelector('.bcard-title') ? c.querySelector('.bcard-title').textContent : '') + ' ' +
+              (c.querySelector('.bcard-excerpt') ? c.querySelector('.bcard-excerpt').textContent : '');
+    var show = hay.toLowerCase().indexOf(lq) !== -1;
+    c.classList.toggle('hidden', !show);
+    if (show) shown++;
+  });
+  document.getElementById('blg-count').textContent = shown + (shown === 1 ? ' result' : ' results');
+  document.getElementById('blg-noresults').style.display = shown === 0 ? 'block' : 'none';
+}
+
+function resetBlog() {
+  document.getElementById('blg-search').value = '';
+  document.querySelectorAll('.ftab')[0].classList.add('active');
+  document.querySelectorAll('.bcard').forEach(function(c){ c.classList.remove('hidden'); });
+  document.getElementById('blg-count').textContent = '20 articles';
+  document.getElementById('blg-noresults').style.display = 'none';
+}
+</script>
+</body>
+</html>

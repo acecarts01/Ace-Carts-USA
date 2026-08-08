@@ -1,0 +1,42 @@
+# Cloudflare Pages _redirects
+# ── Core page .html → clean slash URLs ──────────────────────
+/how-to-order.html            /how-to-order/                 301
+/wholesale.html               /wholesale/                    301
+/about.html                   /about/                        301
+/contact.html                 /contact/                      301
+/checkout.html                /checkout/                     301
+/shipping-policy.html         /shipping-policy/              301
+/privacy-policy.html          /privacy-policy/               301
+/refund-returns.html          /refund-and-returns/           301
+/terms-conditions.html        /terms-and-conditions/         301
+
+# ── Blog .html → clean slash URLs ───────────────────────────
+/blog/index.html              /blog/                         301
+/blog/berry-chill-review.html                       /blog/berry-chill-review/                    301
+/blog/tigers-blood-ace-ultra-review.html            /blog/tigers-blood-ace-ultra-review/         301
+/blog/top-10-ace-ultra-flavors-2025.html            /blog/top-10-ace-ultra-flavors-2025/         301
+/blog/what-are-ace-ultra-premium-carts.html         /blog/what-are-ace-ultra-premium-carts/      301
+/blog/ace-ultra-signature-collection-guide.html     /blog/ace-ultra-signature-collection-guide/  301
+/blog/ace-ultra-spring-edition-review.html          /blog/ace-ultra-spring-edition-review/       301
+/blog/ace-ultra-black-badge-collection-review.html  /blog/ace-ultra-black-badge-collection-review/ 301
+/blog/ace-ultra-4g-gen2-complete-review.html        /blog/ace-ultra-4g-gen2-complete-review/     301
+/blog/ace-ultra-love-edition-vs-spring-edition.html /blog/ace-ultra-love-edition-vs-spring-edition/ 301
+/blog/ace-ultra-wholesale-master-box-guide.html     /blog/ace-ultra-wholesale-master-box-guide/  301
+/blog/ace-ultra-disposables-for-dispensaries.html   /blog/ace-ultra-disposables-for-dispensaries/ 301
+/blog/how-to-order-ace-ultra-premium-carts.html     /blog/how-to-order-ace-ultra-premium-carts/  301
+/blog/how-to-buy-with-crypto.html                   /blog/how-to-buy-with-crypto/                301
+/blog/where-to-buy-ace-ultra-premium-carts.html     /blog/where-to-buy-ace-ultra-premium-carts/  301
+/blog/ace-ultra-shipping-guide-2025.html            /blog/ace-ultra-shipping-guide-2025/         301
+/blog/ace-ultra-love-edition-complete-guide.html    /blog/ace-ultra-love-edition-complete-guide/ 301
+/blog/ace-ultra-2g-vs-4g-disposable-comparison.html /blog/ace-ultra-2g-vs-4g-disposable-comparison/ 301
+/blog/ace-ultra-wholesale-pricing-guide-2025.html   /blog/ace-ultra-wholesale-pricing-guide-2025/ 301
+/blog/ace-ultra-premium-gummies-review.html         /blog/ace-ultra-premium-gummies-review/      301
+/blog/ace-ultra-watermelon-mint-review.html         /blog/ace-ultra-watermelon-mint-review/      301
+
+# ── Security blocks ──────────────────────────────────────────
+/wp-admin/*    /   301
+/wp-login.php  /   301
+/xmlrpc.php    /   301
+
+# ── Trailing-slash enforcement (no double slashes) ───────────
+# Cloudflare Pages handles this natively — no rule needed

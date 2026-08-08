@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+Disallow: /checkout/
+
+User-agent: Bingbot
+Allow: /
+Disallow: /checkout/
+
+User-agent: Googlebot
+Allow: /
+Disallow: /checkout/
+
+Sitemap: https://acecarts.org/sitemap.xml
+Sitemap: https://acecarts.org/sitemap.txt
