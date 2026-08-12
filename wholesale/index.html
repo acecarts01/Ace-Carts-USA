@@ -18,6 +18,8 @@
 <meta name="description" content="Ace Ultra Premium wholesale pricing for dispensaries and resellers. Master boxes for 2G, Mini Gen 4, 4G Dual, and 510 Liquid Diamond. Ships from LA.">
 <title>Wholesale — Ace Ultra Premium Carts | Acecarts.org</title>
 <link rel="canonical" href="https://acecarts.org/wholesale/">
+<link rel="preload" href="/assets/fonts/dm-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/cormorant-garamond-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/css/style.css">
 <style>
 .ws-table{width:100%;border-collapse:collapse;font-size:13px;margin-bottom:32px;}
@@ -39,6 +41,7 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://acecarts.org/wholesale/">
 <meta property="og:image" content="https://acecarts.org/assets/images/hero-slide-1.webp">
+<meta property="og:updated_time" content="2026-08-12T00:00:00+00:00">
 <link rel="sitemap" type="application/xml" href="/sitemap.xml">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:site" content="@acecarts">
@@ -187,7 +190,7 @@
 
 <footer id="site-footer"><div class="container">
   <div class="footer-grid">
-    <div class="fc"><a href="/" class="logo" style="margin-bottom:14px;display:inline-flex"><img src="/assets/images/logo.webp" alt="Ace Ultra Premium Carts" class="logo-img" width="38" height="42"><div class="logo-words"><b>Ace Ultra</b><small>Premium Carts</small></div></a><p>Premium vape products. Los Angeles, CA. Adults 21+ only.</p><div class="f-social"><a href="https://wa.me/14482348667" target="_blank" class="f-soc">💬</a><a href="https://t.me/Aceultrapremiumcarts01" target="_blank" class="f-soc"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:inline-block;vertical-align:middle;"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L7.41 13.946l-2.96-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.738.613z" fill="#229ED9"/></svg></a><a href="mailto:info@acecarts.org" class="f-soc"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline-block;vertical-align:middle;"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,12 2,6"/></svg></a></div></div>
+    <div class="fc"><a href="/" class="logo" style="margin-bottom:14px;display:inline-flex"><img src="/assets/images/logo.webp" alt="Ace Ultra Premium Carts" class="logo-img" width="38" height="42"><div class="logo-words"><b>Ace Ultra</b><small>Premium Carts</small></div></a><p>Premium vape products. Los Angeles, CA. Adults 21+ only.</p><div class="f-social"><a href="https://wa.me/14482348667" target="_blank" class="f-soc">💬</a><a href="https://t.me/Aceultrapremiumcarts01" target="_blank" class="f-soc"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:inline-block;vertical-align:middle;"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L7.41 13.946l-2.96-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.738.613z" fill="#229ED9"/></svg></a><a href="mailto:info&#64;acecarts.org" class="f-soc"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display:inline-block;vertical-align:middle;"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,12 2,6"/></svg></a></div></div>
     <div class="fc"><h4>Shop</h4><ul><li><a href="/shop/">All Products</a></li><li><a href="/shop/?cat=4g">4G Dual</a></li><li><a href="/shop/?cat=diamond">Diamond Sauce</a></li><li><a href="/shop/?cat=mini">Mini Gen 4</a></li><li><a href="/wholesale/">Wholesale</a></li></ul></div>
     <div class="fc"><h4>Company</h4><ul><li><a href="/about/">About</a></li><li><a href="/how-to-order/">How to Order</a></li><li><a href="/blog/">Blog</a></li><li><a href="/contact/">Contact</a></li></ul></div>
     <div class="fc"><h4>Legal</h4><ul><li><a href="/shipping-policy/">Shipping</a></li><li><a href="/refund-and-returns/">Refunds</a></li><li><a href="/privacy-policy/">Privacy</a></li><li><a href="/terms-and-conditions/">Terms</a></li></ul></div>
@@ -227,20 +230,21 @@ function submitWholesale() {
   var btn = document.querySelector('button[onclick*="submitWholesale"]');
   if (btn) { btn.disabled = true; btn.textContent = 'Sending…'; }
 
+  var wfData = new FormData();
+  wfData.append('access_key', W3F_KEY);
+  wfData.append('subject', 'Wholesale Inquiry — ' + name + ' — ' + (volume || 'Volume not specified'));
+  wfData.append('from_name', 'Ace Ultra Wholesale Form');
+  wfData.append('name', name);
+  wfData.append('email', email);
+  wfData.append('phone', phone || 'Not provided');
+  wfData.append('volume', volume || 'Not specified');
+  wfData.append('message', msg);
+  wfData.append('botcheck', '');
+
   fetch('https://api.web3forms.com/submit', {
     method:  'POST',
-    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-    body: JSON.stringify({
-      access_key: W3F_KEY,
-      subject:    'Wholesale Inquiry — ' + name + ' — ' + (volume || 'Volume not specified'),
-      from_name:  'Ace Ultra Wholesale Form',
-      name:       name,
-      email:      email,
-      phone:      phone || 'Not provided',
-      volume:     volume || 'Not specified',
-      message:    msg,
-      botcheck:   ''
-    })
+    headers: { 'Accept': 'application/json' },
+    body: wfData
   })
   .then(function(r) { return r.json(); })
   .then(function(data) {
@@ -252,14 +256,14 @@ function submitWholesale() {
       /* Fallback */
       var body = 'Company/Name: ' + name + '\nEmail: ' + email +
         '\nPhone: ' + phone + '\nVolume: ' + volume + '\n\n' + msg;
-      window.location.href = 'mailto:info@acecarts.org?subject=' +
+      window.location.href = 'mailto:info\u0040acecarts.org?subject=' +
         encodeURIComponent('Wholesale Inquiry — ' + name) + '&body=' + encodeURIComponent(body);
     }
     if (btn) { btn.disabled = false; btn.textContent = '♠ Send Wholesale Inquiry'; }
   })
   .catch(function() {
     var body = 'Name: ' + name + '\nEmail: ' + email + '\nVolume: ' + volume + '\n\n' + msg;
-    window.location.href = 'mailto:info@acecarts.org?subject=' +
+    window.location.href = 'mailto:info\u0040acecarts.org?subject=' +
       encodeURIComponent('Wholesale Inquiry — ' + name) + '&body=' + encodeURIComponent(body);
     if (btn) { btn.disabled = false; btn.textContent = '♠ Send Wholesale Inquiry'; }
   });

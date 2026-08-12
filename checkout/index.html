@@ -23,6 +23,9 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://acecarts.org/checkout/">
 <meta property="og:image" content="https://acecarts.org/assets/images/hero-slide-1.webp">
+<meta property="og:updated_time" content="2026-08-12T00:00:00+00:00">
+<link rel="preload" href="/assets/fonts/dm-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/cormorant-garamond-normal-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/css/style.css">
 <style>
 /* ── CHECKOUT LAYOUT ── */
@@ -237,31 +240,32 @@ function placeOrder(method) {
   if (btn) { btn.disabled = true; btn.textContent = 'Processing…'; }
 
   /* ── POST to Web3Forms → info&#64;acecarts.org (Zoho Mail) ── */
+  var coData = new FormData();
+  coData.append('access_key', W3F_KEY);
+  coData.append('subject', 'NEW ORDER ' + orderNo + ' — $' + total + ' — ' + fn);
+  coData.append('from_name', 'Ace Ultra Checkout');
+  coData.append('order_number', orderNo);
+  coData.append('customer_name', fn);
+  coData.append('customer_email', email);
+  coData.append('customer_phone', phone || 'Not provided');
+  coData.append('shipping_address', fullAddr);
+  coData.append('order_items', lines);
+  coData.append('order_total', '$' + total + ' USD');
+  coData.append('payment_method', payment);
+  coData.append('notes', notes || 'None');
+  coData.append('timestamp', dated + ' (LA time)');
+  coData.append('message', 'ORDER ' + orderNo + '\n' + dated + '\nPayment: ' + payment
+    + '\n\nCustomer: ' + fn + '\nEmail: ' + email + '\nPhone: ' + (phone||'N/A')
+    + '\nAddress: ' + fullAddr
+    + '\n\nITEMS:\n' + lines
+    + '\n\nTOTAL: $' + total + ' USD'
+    + (notes ? '\n\nNotes: ' + notes : ''));
+  coData.append('botcheck', '');
+
   fetch('https://api.web3forms.com/submit', {
     method:  'POST',
-    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-    body: JSON.stringify({
-      access_key:    W3F_KEY,
-      subject:       'NEW ORDER ' + orderNo + ' — $' + total + ' — ' + fn,
-      from_name:     'Ace Ultra Checkout',
-      order_number:  orderNo,
-      customer_name: fn,
-      customer_email: email,
-      customer_phone: phone || 'Not provided',
-      shipping_address: fullAddr,
-      order_items:   lines,
-      order_total:   '$' + total + ' USD',
-      payment_method: payment,
-      notes:         notes || 'None',
-      timestamp:     dated + ' (LA time)',
-      message:       'ORDER ' + orderNo + '\n' + dated + '\nPayment: ' + payment
-        + '\n\nCustomer: ' + fn + '\nEmail: ' + email + '\nPhone: ' + (phone||'N/A')
-        + '\nAddress: ' + fullAddr
-        + '\n\nITEMS:\n' + lines
-        + '\n\nTOTAL: $' + total + ' USD'
-        + (notes ? '\n\nNotes: ' + notes : ''),
-      botcheck: ''
-    })
+    headers: { 'Accept': 'application/json' },
+    body: coData
   })
   .then(function(r) { return r.json(); })
   .then(function(data) {
@@ -299,7 +303,7 @@ function _mailtoFallback(fn, email, addr, lines, total, payment, notes, orderNo,
     + '\n\nITEMS:\n' + lines
     + '\n\nTOTAL: $' + total + ' USD'
     + (notes ? '\n\nNotes: ' + notes : '');
-  window.location.href = 'mailto:info@acecarts.org?subject='
+  window.location.href = 'mailto:info\u0040acecarts.org?subject='
     + encodeURIComponent('NEW ORDER ' + orderNo + ' — $' + total + ' — ' + fn)
     + '&body=' + encodeURIComponent(body);
 }
