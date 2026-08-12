@@ -141,7 +141,7 @@ img{display:block;max-width:100%;height:auto;}a{color:inherit;text-decoration:no
 .sh p{font-size:13px;color:var(--muted);max-width:500px;margin-top:10px;line-height:1.7;}.sh-center{text-align:center;}.sh-center p{margin:10px auto 0;}
 /* POLICY PAGES */
 .policy-body{max-width:760px;}.policy-body h2{font-family:var(--font-d);font-size:22px;font-weight:400;color:var(--white);margin:36px 0 12px;}.policy-body h3{font-size:14px;font-weight:500;color:var(--white);margin:24px 0 8px;}
-.policy-body p{font-size:13px;color:var(--muted);line-height:1.8;margin-bottom:14px;}.policy-body ul{padding-left:20px;margin-bottom:14px;}.policy-body li{font-size:13px;color:var(--muted);line-height:1.75;margin-bottom:6px;}.policy-body a{color:var(--gold);}
+.policy-body p{font-size:13px;color:var(--muted);line-height:1.8;margin-bottom:14px;}.policy-body ul{padding-left:20px;margin-bottom:14px;}.policy-body li{font-size:13px;color:var(--muted);line-height:1.75;margin-bottom:6px;}.policy-body a{color:var(--gold);text-decoration:underline;}
 .policy-date{font-size:11px;color:var(--muted2);letter-spacing:.08em;margin-bottom:32px;}
 /* CONTACT */
 .contact-opt{display:flex;align-items:center;gap:16px;padding:18px 22px;border:1px solid var(--border);border-radius:var(--rl);background:var(--card);transition:var(--tr);cursor:pointer;}.contact-opt:hover{border-color:var(--gold);}
@@ -254,7 +254,7 @@ img{display:block;max-width:100%;height:auto;}a{color:inherit;text-decoration:no
 .seo-text h2{column-span:all;font-family:var(--font-d);font-size:24px;font-weight:400;color:var(--white);margin-bottom:16px;}
 .seo-text h3{font-size:14px;font-weight:500;color:var(--white);margin:20px 0 8px;}
 .seo-text p{font-size:12px;color:var(--muted);line-height:1.8;margin-bottom:12px;}
-.seo-text a{color:var(--gold);}
+.seo-text a{color:var(--gold);text-decoration:underline;}
 
 /* ══════════════════════════════════════════════════════
    BLOG HUB — index.html
@@ -326,7 +326,7 @@ img{display:block;max-width:100%;height:auto;}a{color:inherit;text-decoration:no
 .post-body p{margin-bottom:18px;}
 .post-body ul,.post-body ol{padding-left:22px;margin-bottom:18px;}
 .post-body li{margin-bottom:7px;line-height:1.75;}
-.post-body a{color:var(--gold);transition:opacity .2s;}
+.post-body a{color:var(--gold);text-decoration:underline;transition:opacity .2s;}
 .post-body a:hover{opacity:.75;}
 .post-body strong{color:var(--white);font-weight:500;}
 .post-body blockquote{border-left:2px solid var(--gold);padding:14px 20px;margin:24px 0;background:var(--card);border-radius:0 var(--r) var(--r) 0;font-style:italic;color:var(--muted);}
