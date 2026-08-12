@@ -34,7 +34,7 @@
 /blog/ace-ultra-watermelon-mint-review.html         /blog/ace-ultra-watermelon-mint-review/      301
 
 # ── Duplicate product consolidation ──────────────────────────
-/products/signature-gold-retailer-bulk/  /products/signature-gold-retailer-bulk-deals/  301!
+/products/signature-gold-retailer-bulk/  /products/signature-gold-retailer-bulk-deals/  301
 
 # ── Security blocks ──────────────────────────────────────────
 /wp-admin/*    /   301
