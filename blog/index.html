@@ -59,7 +59,7 @@
 /* Search */
 .blg-search{position:relative;max-width:260px;flex-shrink:0;}
 .blg-search-in{width:100%;background:#111;border:1px solid rgba(255,255,255,.07);border-radius:100px;padding:9px 40px 9px 16px;font-family:'DM Sans',sans-serif;font-size:12px;color:#f5f0e8;outline:none;transition:border-color .2s;}
-.blg-search-in::placeholder{color:rgba(245,240,232,.3);}
+.blg-search-in::placeholder{color:rgba(245,240,232,.52);}
 .blg-search-in:focus{border-color:#c9a84c;}
 .blg-search-btn{position:absolute;right:12px;top:50%;transform:translateY(-50%);background:none;border:none;color:#c9a84c;font-size:14px;cursor:pointer;padding:0;}
 
@@ -170,8 +170,8 @@
     <a href="/contact/" class="nav-a">Contact</a>
   </nav>
   <div class="h-actions">
-    <a href="https://wa.me/14482348667" target="_blank" rel="noopener" class="h-icon" title="WhatsApp">💬</a>
-    <a href="https://t.me/Aceultrapremiumcarts01" target="_blank" rel="noopener" class="h-icon" title="Telegram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:inline-block;vertical-align:middle;"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L7.41 13.946l-2.96-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.738.613z" fill="#229ED9"/></svg></a>
+    <a href="https://wa.me/14482348667" target="_blank" rel="noopener" class="h-icon" aria-label="WhatsApp" title="WhatsApp">💬</a>
+    <a href="https://t.me/Aceultrapremiumcarts01" target="_blank" rel="noopener" class="h-icon" aria-label="Telegram" title="Telegram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:inline-block;vertical-align:middle;"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.894 8.221-1.97 9.28c-.145.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.16-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12L7.41 13.946l-2.96-.924c-.643-.204-.657-.643.136-.953l11.57-4.461c.537-.194 1.006.131.738.613z" fill="#229ED9"/></svg></a>
     <button class="h-icon h-cart" onclick="toggleCart()" title="Cart" aria-label="Cart">🛒<span class="cart-badge"></span></button>
     <button class="hamburger" onclick="toggleMobNav()" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
@@ -717,7 +717,7 @@
 <a href="https://wa.me/14482348667" target="_blank" rel="noopener" id="wa-float" title="Chat on WhatsApp" aria-label="Chat on WhatsApp">&#128172;</a>
 <div id="cart-overlay" onclick="toggleCart()"></div>
 <div id="cart-drawer"><div class="drawer-head"><span class="drawer-title">Cart &#9824;</span><button class="drawer-x" onclick="toggleCart()" aria-label="Close cart">&#10005;</button></div><div class="drawer-body" id="drawer-body"></div><div class="drawer-foot"><div class="min-notice" id="min-notice">&#9888; Min $100 USD.</div><div class="subtotal-row"><span>Subtotal</span><strong id="subtotal-val">$0.00</strong></div><div class="coupon-row"><input class="coupon-in" id="coupon-input" placeholder="Coupon code"><button class="coupon-btn" onclick="applyCoupon()">Apply</button></div><button class="btn-checkout" onclick="checkout()">Checkout &#8594;</button></div></div>
-<div id="qv-overlay" onclick="closeQV(event)"><div class="qv-box"><div class="qv-img"><button class="qv-close" onclick="closeQV()" aria-label="Close quick view">&#10005;</button><span id="qv-emoji">&#9824;</span></div><div class="qv-content"><div class="qv-cat" id="qv-cat"></div><div class="qv-name" id="qv-name"></div><div class="qv-var" id="qv-var"></div><div class="qv-desc" id="qv-desc"></div><div class="qv-price" id="qv-price"></div><div class="qv-qty"><span class="qv-qty-label">Qty</span><div class="qv-qty-ctrl"><button class="qv-qb" onclick="changeQVQty(-1)">&#8722;</button><span class="qv-qn" id="qv-qty-n">1</span><button class="qv-qb" onclick="changeQVQty(1)">+</button></div></div><button class="qv-add" onclick="addFromQV()">Add to Cart</button><div class="qv-tags" id="qv-tags"></div></div></div></div>
+<div id="qv-overlay" onclick="closeQV(event)"><div class="qv-box"><div class="qv-img"><button class="qv-close" onclick="closeQV()" aria-label="Close quick view">&#10005;</button><span id="qv-emoji">&#9824;</span></div><div class="qv-content"><div class="qv-cat" id="qv-cat"></div><div class="qv-name" id="qv-name"></div><div class="qv-var" id="qv-var"></div><div class="qv-desc" id="qv-desc"></div><div class="qv-price" id="qv-price"></div><div class="qv-qty"><span class="qv-qty-label">Qty</span><div class="qv-qty-ctrl"><button class="qv-qb" onclick="changeQVQty(-1)" aria-label="Decrease quantity">&#8722;</button><span class="qv-qn" id="qv-qty-n">1</span><button class="qv-qb" onclick="changeQVQty(1)" aria-label="Increase quantity">+</button></div></div><button class="qv-add" onclick="addFromQV()">Add to Cart</button><div class="qv-tags" id="qv-tags"></div></div></div></div>
 <div id="toast"><span>&#10003;</span><span class="toast-msg"></span></div>
 
 <script src="/assets/js/app.js"></script>

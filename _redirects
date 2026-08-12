@@ -36,6 +36,10 @@
 # ── Duplicate product consolidation ──────────────────────────
 /products/signature-gold-retailer-bulk/  /products/signature-gold-retailer-bulk-deals/  301
 
+# ── Legacy/orphaned URLs flagged as 404 in Google Search Console ──
+/refund-returns/    /refund-and-returns/   301
+/blog/shop.html     /shop/                 301
+
 # ── Security blocks ──────────────────────────────────────────
 /wp-admin/*    /   301
 /wp-login.php  /   301

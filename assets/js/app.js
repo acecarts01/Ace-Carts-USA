@@ -194,7 +194,7 @@ function renderProductCards(list, containerId) {
         <div class="pc-cat">${p.cat || ''}</div>
         <a href="/products/${PRODUCT_SLUGS[p.id] || ''}/" class="pc-name" style="color:inherit;text-decoration:none;">${p.name}</a>
         ${varStr ? `<div class="pc-var">${varStr}</div>` : ''}
-        <div class="pc-price">$${p.price.toFixed(2)}<small style="font-size:10px;font-weight:400;color:rgba(245,240,232,.3);margin-left:3px;">/ea</small></div>
+        <div class="pc-price">$${p.price.toFixed(2)}<small style="font-size:10px;font-weight:400;color:rgba(245,240,232,.52);margin-left:3px;">/ea</small></div>
         <button class="pc-add" onclick="event.stopPropagation();addToCart(${p.id},1)">Add to Cart</button>
       </div>
     </div>`;
