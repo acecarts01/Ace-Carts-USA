@@ -1,0 +1,15 @@
+# Local-only working files — never committed, never deployed (Cloudflare Pages
+# serves this repo root directly, so anything here would otherwise go live).
+
+# Raw/unprocessed client photo uploads (source assets, not the optimized webp output)
+/Ace Ultra Premium/
+
+# Old manual deploy archives / duplicated build folders
+/acecarts-deploy-FINAL*.zip
+/acecarts-deploy-FINAL*/
+
+# Strategy & audit working docs — never publish (WebForge Rule 12)
+/docs/
+
+# Claude Code local session state
+/.claude/

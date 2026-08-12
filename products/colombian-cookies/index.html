@@ -15,6 +15,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <meta name="description" content="Buy Colombian Cookies indica — rich earthy cookie flavor. Relaxing 4G. Fast shipping from LA. WhatsApp, Telegram, and crypto orders welcome.">
 <meta property="og:title" content="Colombian Cookies | Ace Ultra Premium Carts">
+<meta property="og:site_name" content="Ace Ultra Premium Carts">
 <meta property="og:description" content="Buy Colombian Cookies indica — rich earthy cookie flavor. Relaxing 4G. Fast shipping from LA. WhatsApp, Telegram, and crypto orders welcome.">
 <meta property="og:type" content="product">
 <meta property="og:url" content="https://acecarts.org/products/colombian-cookies/">
@@ -62,7 +63,7 @@
 <!-- CART DRAWER -->
 <div id="cart-overlay" onclick="toggleCart()"></div>
 <div id="cart-drawer">
-  <div class="drawer-head"><span class="drawer-title">Your Cart ♠</span><button class="drawer-x" onclick="toggleCart()">&#215;</button></div>
+  <div class="drawer-head"><span class="drawer-title">Your Cart ♠</span><button class="drawer-x" onclick="toggleCart()" aria-label="Close cart">&#215;</button></div>
   <div class="drawer-body" id="drawer-body"><div class="drawer-empty"><span>🛒</span>Your cart is empty.</div></div>
   <div class="drawer-foot">
     <div class="min-notice" id="min-notice">⚠ Minimum order is $100 USD. Add more products.</div>
@@ -75,7 +76,7 @@
 
 
 <!-- QUICK VIEW OVERLAY (reused) -->
-<div id="qv-overlay" onclick="closeQV()"><div class="qv-modal" onclick="event.stopPropagation()"><button class="qv-close" onclick="closeQV()">&#215;</button><div id="qv-body"></div></div></div>
+<div id="qv-overlay" onclick="closeQV()"><div class="qv-modal" onclick="event.stopPropagation()"><button class="qv-close" onclick="closeQV()" aria-label="Close quick view">&#215;</button><div id="qv-body"></div></div></div>
 
 <!-- BREADCRUMB -->
 <nav aria-label="breadcrumb" style="padding:80px 32px 0;max-width:1380px;margin:0 auto;">
@@ -99,7 +100,7 @@
   <div class="container">
     <div class="prod-grid">
       <div class="prod-img-wrap">
-        <img src="/assets/images/products/colombian-cookies-indica.webp" alt="Colombian Cookies — Ace Ultra Premium Carts" width="600" height="600" loading="eager">
+        <img src="/assets/images/products/colombian-cookies-indica.webp" alt="Colombian Cookies — Ace Ultra Premium Carts" width="600" height="600" loading="eager" fetchpriority="high">
       </div>
       <div class="prod-info">
         <div class="prod-badge-row">

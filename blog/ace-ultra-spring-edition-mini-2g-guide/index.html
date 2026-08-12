@@ -18,6 +18,7 @@
 <meta name="description" content="Ace Ultra Spring Edition Mini 2G guide — the compact seasonal collection, flavor lineup, wholesale options, and where to buy Ace Ultra Premium carts at acecarts.org.">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 <meta property="og:title" content="Ace Ultra Spring Edition Mini 2G Guide | Acecarts.org">
+<meta property="og:site_name" content="Ace Ultra Premium Carts">
 <meta property="og:description" content="Ace Ultra Spring Edition Mini 2G guide — the compact seasonal collection, flavor lineup, wholesale options, and where to buy Ace Ultra Premium carts at acecarts.org.">
 <meta property="og:image" content="https://acecarts.org/assets/images/products/spring-edition-mini-2g.webp">
 <meta property="og:updated_time" content="2026-08-12T00:00:00+00:00">
@@ -66,8 +67,8 @@
   <div class="h-actions">
     <a href="https://wa.me/14482348667" target="_blank" rel="noopener" class="h-icon">&#128172;</a>
     <a href="https://t.me/Aceultrapremiumcarts01" target="_blank" rel="noopener" class="h-icon">&#9992;&#65039;</a>
-    <button class="h-icon h-cart" onclick="toggleCart()">&#128717;<span class="cart-badge"></span></button>
-    <button class="hamburger" onclick="toggleMobNav()"><span></span><span></span><span></span></button>
+    <button class="h-icon h-cart" onclick="toggleCart()" aria-label="Cart">&#128717;<span class="cart-badge"></span></button>
+    <button class="hamburger" onclick="toggleMobNav()" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
 </div></header>
 <div id="mob-nav" role="dialog" aria-modal="true" aria-label="Mobile navigation">
@@ -157,9 +158,9 @@
   </div>
   <div class="footer-bottom"><div class="footer-copy">&#169; 2025 Ace Ultra Premium Carts USA &#183; acecarts.org<br>For adults 21+ only.</div><span class="age-pill">&#9824; 21+ Only</span></div>
 </div></footer>
-<a href="https://wa.me/14482348667" target="_blank" rel="noopener" id="wa-float">&#128172;</a>
+<a href="https://wa.me/14482348667" target="_blank" rel="noopener" id="wa-float" aria-label="Chat on WhatsApp">&#128172;</a>
 <div id="cart-overlay" onclick="toggleCart()"></div>
-<div id="cart-drawer"><div class="drawer-head"><span class="drawer-title">Cart &#9824;</span><button class="drawer-x" onclick="toggleCart()">&#10005;</button></div><div class="drawer-body" id="drawer-body"></div><div class="drawer-foot"><div class="min-notice" id="min-notice">&#9888; Min $100 USD.</div><div class="subtotal-row"><span>Subtotal</span><strong id="subtotal-val">$0.00</strong></div><div class="coupon-row"><input class="coupon-in" id="coupon-input" placeholder="Coupon code"><button class="coupon-btn" onclick="applyCoupon()">Apply</button></div><button class="btn-checkout" onclick="checkout()">Checkout &#8594;</button></div></div>
+<div id="cart-drawer"><div class="drawer-head"><span class="drawer-title">Cart &#9824;</span><button class="drawer-x" onclick="toggleCart()" aria-label="Close cart">&#10005;</button></div><div class="drawer-body" id="drawer-body"></div><div class="drawer-foot"><div class="min-notice" id="min-notice">&#9888; Min $100 USD.</div><div class="subtotal-row"><span>Subtotal</span><strong id="subtotal-val">$0.00</strong></div><div class="coupon-row"><input class="coupon-in" id="coupon-input" placeholder="Coupon code"><button class="coupon-btn" onclick="applyCoupon()">Apply</button></div><button class="btn-checkout" onclick="checkout()">Checkout &#8594;</button></div></div>
 <div id="toast"><span>&#10003;</span><span class="toast-msg"></span></div>
 <script src="/assets/js/app.js"></script>
 </body>
